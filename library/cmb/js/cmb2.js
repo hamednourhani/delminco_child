@@ -58,7 +58,7 @@ window.CMB2 = (function(window, document, $, undefined){
 		// Wrap date picker in class to narrow the scope of jQuery UI CSS and prevent conflicts
 		$id( 'ui-datepicker-div' ).wrap('<div class="cmb2-element" />');
 
-		// Insert toggle button into DOM wherever there is multicheck. credit: Genesis Framework
+		// Insert toggle button into DOM wherever there is multicheck. credit: Genesis delminco
 		$( '<p><span class="button cmb-multicheck-toggle">' + l10n.strings.check_toggle + '</span></p>' ).insertBefore( '.cmb2-checkbox-list:not(.no-select-all)' );
 
 		// Make File List drag/drop sortable:

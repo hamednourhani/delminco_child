@@ -1,5 +1,5 @@
 <?php
-/* royal Custom Post Type Example
+/* delminco Custom Post Type Example
 This page walks you through creating 
 a custom post type and taxonomies. You
 can edit this one or copy the following code 
@@ -11,14 +11,14 @@ and change things if they are concentrated
 in their own file.
 
 Developed by: Eddie Machado
-URL: http://themble.com/royal/
+URL: http://themble.com/delminco/
 */
 
 // Flush rewrite rules for custom post types
-add_action( 'after_switch_theme', 'royal_flush_rewrite_rules' );
+add_action( 'after_switch_theme', 'delminco_flush_rewrite_rules' );
 
 // Flush your rewrite rules
-function royal_flush_rewrite_rules() {
+function delminco_flush_rewrite_rules() {
 	flush_rewrite_rules();
 }
 
@@ -30,21 +30,21 @@ function suply_post_type() {
 	register_post_type( 'suply', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
 		// let's now add all the options for this post type
 		array( 'labels' => array(
-			'name' => __( 'suply', 'royal' ), /* This is the Title of the Group */
-			'singular_name' => __( 'suply', 'royal' ), /* This is the individual type */
-			'all_items' => __( 'All suplies', 'royal' ), /* the all items menu item */
-			'add_new' => __( 'Add New', 'royal' ), /* The add new menu item */
-			'add_new_item' => __( 'Add New suply', 'royal' ), /* Add New Display Title */
-			'edit' => __( 'Edit', 'royal' ), /* Edit Dialog */
-			'edit_item' => __( 'Edit suply', 'royal' ), /* Edit Display Title */
-			'new_item' => __( 'New suply', 'royal' ), /* New Display Title */
-			'view_item' => __( 'View suply', 'royal' ), /* View Display Title */
-			'search_items' => __( 'Search suplies', 'royal' ), /* Search Custom Type Title */ 
-			'not_found' =>  __( 'Nothing found in the Database.', 'royal' ), /* This displays if there are no entries yet */ 
-			'not_found_in_trash' => __( 'Nothing found in Trash', 'royal' ), /* This displays if there is nothing in the trash */
+			'name' => __( 'suply', 'delminco' ), /* This is the Title of the Group */
+			'singular_name' => __( 'suply', 'delminco' ), /* This is the individual type */
+			'all_items' => __( 'All suplies', 'delminco' ), /* the all items menu item */
+			'add_new' => __( 'Add New', 'delminco' ), /* The add new menu item */
+			'add_new_item' => __( 'Add New suply', 'delminco' ), /* Add New Display Title */
+			'edit' => __( 'Edit', 'delminco' ), /* Edit Dialog */
+			'edit_item' => __( 'Edit suply', 'delminco' ), /* Edit Display Title */
+			'new_item' => __( 'New suply', 'delminco' ), /* New Display Title */
+			'view_item' => __( 'View suply', 'delminco' ), /* View Display Title */
+			'search_items' => __( 'Search suplies', 'delminco' ), /* Search Custom Type Title */ 
+			'not_found' =>  __( 'Nothing found in the Database.', 'delminco' ), /* This displays if there are no entries yet */ 
+			'not_found_in_trash' => __( 'Nothing found in Trash', 'delminco' ), /* This displays if there is nothing in the trash */
 			'parent_item_colon' => ''
 			), /* end of arrays */
-			'description' => __( 'This is a suply', 'royal' ), /* Custom Type Description */
+			'description' => __( 'This is a suply', 'delminco' ), /* Custom Type Description */
 			'public' => true,
 			'show_in_nav_menus' => true,
 			'publicly_queryable' => true,
@@ -59,7 +59,7 @@ function suply_post_type() {
 			'map_meta_cap'        => true,
 			'hierarchical' => false,
 			/* the next one is important, it tells what's enabled in the post editor */
-			'supports' => array( 'title', 'editor', 'author', 'thumbnail', /*'excerpt', 'trackbacks', 'custom-fields', */'comments',/* 'revisions', 'sticky'*/)
+			'supports' => array( 'title', 'editor', 'author','thumbnail', /*'excerpt', 'trackbacks', 'custom-fields', */'comments'/* 'revisions', 'sticky'*/)
 		) /* end of options */
 	); /* end of register post type */
 	
@@ -79,16 +79,16 @@ function suply_post_type() {
 		array('suply'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
 		array('hierarchical' => true,     /* if this is true, it acts like categories */
 			'labels' => array(
-				'name' => __( 'suply Categories', 'royal' ), /* name of the custom taxonomy */
-				'singular_name' => __( 'suply Category', 'royal' ), /* single taxonomy name */
-				'search_items' =>  __( 'Search suply Categories', 'royal' ), /* search title for taxomony */
-				'all_items' => __( 'All suply Categories', 'royal' ), /* all title for taxonomies */
-				'parent_item' => __( 'Parent suply Category', 'royal' ), /* parent title for taxonomy */
-				'parent_item_colon' => __( 'Parent suply Category:', 'royal' ), /* parent taxonomy title */
-				'edit_item' => __( 'Edit suply Category', 'royal' ), /* edit custom taxonomy title */
-				'update_item' => __( 'Update suply Category', 'royal' ), /* update title for taxonomy */
-				'add_new_item' => __( 'Add New suply Category', 'royal' ), /* add new title for taxonomy */
-				'new_item_name' => __( 'New suply Category Name', 'royal' ) /* name title for taxonomy */
+				'name' => __( 'suply Categories', 'delminco' ), /* name of the custom taxonomy */
+				'singular_name' => __( 'suply Category', 'delminco' ), /* single taxonomy name */
+				'search_items' =>  __( 'Search suply Categories', 'delminco' ), /* search title for taxomony */
+				'all_items' => __( 'All suply Categories', 'delminco' ), /* all title for taxonomies */
+				'parent_item' => __( 'Parent suply Category', 'delminco' ), /* parent title for taxonomy */
+				'parent_item_colon' => __( 'Parent suply Category:', 'delminco' ), /* parent taxonomy title */
+				'edit_item' => __( 'Edit suply Category', 'delminco' ), /* edit custom taxonomy title */
+				'update_item' => __( 'Update suply Category', 'delminco' ), /* update title for taxonomy */
+				'add_new_item' => __( 'Add New suply Category', 'delminco' ), /* add new title for taxonomy */
+				'new_item_name' => __( 'New suply Category Name', 'delminco' ) /* name title for taxonomy */
 			),
 			'show_admin_column' => true, 
 			'show_ui' => true,
@@ -103,16 +103,16 @@ function suply_post_type() {
 		array('suply'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
 		array('hierarchical' => false,    /* if this is false, it acts like tags */
 			'labels' => array(
-				'name' => __( 'suply Tags', 'royal' ), /* name of the custom taxonomy */
-				'singular_name' => __( 'suply Tag', 'royal' ), /* single taxonomy name */
-				'search_items' =>  __( 'Search suply Tags', 'royal' ), /* search title for taxomony */
-				'all_items' => __( 'All suply Tags', 'royal' ), /* all title for taxonomies */
-				'parent_item' => __( 'Parent suply Tag', 'royal' ), /* parent title for taxonomy */
-				'parent_item_colon' => __( 'Parent suply Tag:', 'royal' ), /* parent taxonomy title */
-				'edit_item' => __( 'Edit suply Tag', 'royal' ), /* edit custom taxonomy title */
-				'update_item' => __( 'Update suply Tag', 'royal' ), /* update title for taxonomy */
-				'add_new_item' => __( 'Add New suply Tag', 'royal' ), /* add new title for taxonomy */
-				'new_item_name' => __( 'New suply Tag Name', 'royal' ) /* name title for taxonomy */
+				'name' => __( 'suply Tags', 'delminco' ), /* name of the custom taxonomy */
+				'singular_name' => __( 'suply Tag', 'delminco' ), /* single taxonomy name */
+				'search_items' =>  __( 'Search suply Tags', 'delminco' ), /* search title for taxomony */
+				'all_items' => __( 'All suply Tags', 'delminco' ), /* all title for taxonomies */
+				'parent_item' => __( 'Parent suply Tag', 'delminco' ), /* parent title for taxonomy */
+				'parent_item_colon' => __( 'Parent suply Tag:', 'delminco' ), /* parent taxonomy title */
+				'edit_item' => __( 'Edit suply Tag', 'delminco' ), /* edit custom taxonomy title */
+				'update_item' => __( 'Update suply Tag', 'delminco' ), /* update title for taxonomy */
+				'add_new_item' => __( 'Add New suply Tag', 'delminco' ), /* add new title for taxonomy */
+				'new_item_name' => __( 'New suply Tag Name', 'delminco' ) /* name title for taxonomy */
 			),
 			'show_admin_column' => true,
 			'show_ui' => true,
