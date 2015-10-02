@@ -1,0 +1,241 @@
+/*
+ Theme Name:   Royal Child
+ Theme URI:    http://8theme.com/
+ Description:  Royal Child Theme
+ Author:       8theme
+ Author URI:   http://8theme.com
+ Template:     royal
+ Version:      0.0.1
+ Text Domain:  royal-child
+*/
+/*---------------Header -------------------------*/
+@font-face {
+  font-family: "open-sans";
+  src: url('fonts/OpenSans-Regular.eot?1441771063');
+  src: url('fonts/OpenSans-Regular.eot?&1441771063#iefix') format('embedded-opentype'), url('fonts/OpenSans-Regular.ttf?1441771063') format('truetype'), url('fonts/OpenSans-Regular.woff?1441771063') format('woff');
+  font-weight: "OpenSans-Regular.svg"; }
+
+body{
+	font-family : "open-sans";
+}
+header.header .menu-wrapper {
+    background: #525252 !important;
+}
+.header form.form-search{
+width : 500px;
+margin-top: 36px;
+}
+.header-type-8 .navbar-header .top-links {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    left : auto;
+}
+.header form.form-search .search-cate,
+.header form.form-search .searchbox-submit,
+.header form.form-search .topsearch-entry,
+.header form.form-search  input.search-query.ipt1 {
+  
+float : left;
+}
+button.searchbox-submit:before{
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; 
+content : "\f002";
+font-size: 18px;
+    padding: 4px ;
+}
+button.searchbox-submit{
+background-color : #525252;
+	padding: 4px 6px;
+}
+/*------top search correcting--------------------------*/
+input.search-query.ipt1 {
+    width: 310px;
+    padding: 14px;
+    height : 34px;
+}
+select.sl_option {
+    
+    padding: 1px 16px;
+    background-position: 96% 50%;
+    background-color : #eee;
+    height: 34px;
+}
+div#user-submitted-posts fieldset input.usp-input,
+div#user-submitted-posts fieldset label,
+div#user-submitted-posts select,
+div#user-submitted-posts textarea.usp-textarea{
+    float: left;
+}
+
+
+.navbar {
+    
+    padding: 10px 0;
+}
+.header-type-10 .navbar-header .top-links {
+    position: absolute;
+    top: 10px;
+    right: 350px;
+    width: 350px;
+}
+
+
+
+.header-type-6 .menu-wrapper .menu-main-container > ul > li > a, .header-type-7 .menu-wrapper .menu-main-container > ul > li > a, .header-type-8 .menu-wrapper .menu-main-container > ul > li > a, .header-type-10 .menu-wrapper .menu-main-container > ul > li > a, .header-type-12 .menu-wrapper .menu-main-container > ul > li > a {
+    padding: 16px 17px;
+    border-left: 1px solid #ebebeb;
+}
+
+.header-type-6 .menu-wrapper .menu-main-container > ul .nav-sublist-dropdown, .header-type-7 .menu-wrapper .menu-main-container > ul .nav-sublist-dropdown, .header-type-8 .menu-wrapper .menu-main-container > ul .nav-sublist-dropdown, .header-type-10 .menu-wrapper .menu-main-container > ul .nav-sublist-dropdown, .header-type-12 .menu-wrapper .menu-main-container > ul .nav-sublist-dropdown {
+    border: 1px solid #e6e6e6;
+    margin-top: -13px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.header-type-6 .menu-wrapper .menu-main-container > ul .nav-sublist-dropdown, .header-type-7 .menu-wrapper .menu-main-container > ul .nav-sublist-dropdown, .header-type-8 .menu-wrapper .menu-main-container > ul .nav-sublist-dropdown, .header-type-10 .menu-wrapper .menu-main-container > ul .nav-sublist-dropdown, .header-type-12 .menu-wrapper .menu-main-container > ul .nav-sublist-dropdown {
+    top: 100%;
+}
+
+.main-header .top-links {
+    float: none;
+    width: 100%;
+    display: block;
+    clear: both;
+    background-color: #eee;
+    height: 30px;
+}
+.top-links .languages-area {
+    float: right;
+    padding: 8px 0 4px;
+}
+/*---------------------wpml---------------------*/
+.languages-area #lang_sel li {
+    width: 100px;
+}
+#lang_sel ul ul {
+    width: 100px;
+    
+}
+#lang_sel {
+    height: 21px;
+    position: relative;
+    font-family: verdana, arial, sans-serif;
+    display: inline-block;
+}
+#lang_sel a.lang_sel_sel {
+    background: url(../img/nav-arrow-down.png) #D8D7D7 right no-repeat;
+    color: #444;
+}
+
+/*-------------------new styles-----------------------------*/
+.cart-popup-container {
+    right: -12px;
+}
+.cart-popup-container:before {
+   margin-left: 11px;
+}
+.main-header .top-links {
+    text-align: right;
+}
+
+.top-links .links{
+    padding:5px 20px;
+}
+
+#lang_sel {
+    float: none;
+    text-align: left;
+}
+#lang_sel_list {
+   padding : 8px 20px;
+   display : inline-block;
+   float : left;
+}
+#lang_sel_list img.iclflag {
+     top: -1px;
+     padding : auto 3px;
+}
+
+
+#lang_sel_list ul a,#lang_sel_list a:visited {
+    background: #eee;
+}
+@media only screen and (max-width: 500px){
+.top-links .links{
+    display : none;
+}
+.top-links{
+    text-align : center;
+}
+#lang_sel_list {
+   padding : 8px 20px;
+   display : inline-block;
+   float : none;
+}
+}
+@media only screen and (max-width: 992px){
+    form.form-search{
+        display : none;
+    }
+
+    .header-logo img, .header-type-6 .header .header-logo img {
+        width: auto !important;
+    }
+    .header-type-10 .header .header-logo{
+        text-align : center !important;
+    }
+}
+
+
+/*----------------Contact form----------------------------------*/
+form.wpcf7-form{
+  text-align: left;
+}
+form.wpcf7-form p,form.wpcf7-form input{
+    float : left;
+    clear : both;
+    display : block;
+}
+
+/*---------------woocomerce -------------------------*/
+.sidebar-widget.woocommerce.widget_product_categories{
+    border : 1px solid #eee;
+}
+
+.widget_product_categories .widget-title{
+    background-color: #444444;
+    text-align : center;
+    border-top : 2px solid #00ABF0;
+    padding : 18px 12px;
+    
+}
+.widget_product_categories .widget-title span{
+    background-color: #444444;
+    color : white;
+}
+.widget_product_categories .widget-title .cat-item a{
+    padding : 13px 15px;
+}
+.widget_product_categories .product-categories > li > a{
+    padding : 13px 15px;
+}
+.widget_product_categories .product-categories > li > ul.children li > a{
+    padding : 13px 15px;
+}
+
+.main-footer .uavc-list-icon p{
+    font-size : 14px;
+}
+/*---------------QR Code -------------------------*/
+
+.etheme_widget_qr_code {
+  
+    padding: 15px;
+    margin-bottom: 20px;
+}

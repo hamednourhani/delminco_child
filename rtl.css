@@ -1,0 +1,729 @@
+/*
+Theme Name: flatsome
+
+Adding support for language written in a Right To Left (RTL) direction is easy -
+it's just a matter of overwriting all the horizontal positioning attributes
+of your CSS stylesheet in a separate stylesheet file named rtl.css.
+
+http://codex.wordpress.org/Right_to_Left_Language_Support
+
+*/
+@font-face {  font-family: 'BYekan';  font-weight: normal;  src: url('fonts/BYekan.eot?#') format('eot'),  /* IE6?8 */     url('fonts/BYekan.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/     url('fonts/BYekan.ttf') format('truetype');  /* Saf3?5, Chrome4+, FF3.5, Opera 10+ */}body {direction:rtl;unicode-bidi: embed;font-family:BYekan,Tahoma,Arial;}
+body {font-family : Byekan; }
+h1,h2,h3,h4,h5,h6,
+.menu-main-container,.mini-text,.btn,.medium-btn,.btn-black,
+.menu > li a,a.comment-reply-link,
+.comments-list .media-heading a, .comments-list .media-heading,
+.meta-comm,.comments-list .media p,
+.widget_categories a,.widget a,.widget p,.meta-post,.content-article,
+form .form-row label,.blog-post-list .media-body,.date-event,
+.blog-post-list .media-heading,
+.blog-post-list .media-heading a,
+.main-footer p,.mymail-form,.mymail-form input,.mymail-form label,
+.wpcf7-form-control.wpcf7-submit,.ubtn-data,.ubtn-text {
+font-family : BYekan ,"open-sans"!important;}
+
+body {
+  direction: rtl;
+  unicode-bidi: embed;
+  text-align:right;
+}
+
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
+direction: rtl;
+}
+.menu > li {
+    float: right;
+}
+.header-logo {
+padding-left: 20px;
+}
+.cart-popup-container {
+right: -50px;
+}
+.menu .nav-sublist-dropdown ul > li > a {
+float: right;
+}
+.sidebar-widget .widget-title, .sidebar-slider .widget-title {
+text-align: right;
+}
+.sidebar-widget .widget-title span, .sidebar-slider .widget-title span {
+padding-right: 0;
+}
+div#st-container {
+direction: ltr;
+}
+ul.menu.et-mobile-menu{
+  direction : rtl;
+}
+.white-popup-block {
+text-align: right;
+}
+.top-links li.popup_link:before {
+left : 0;
+right: -10px;
+}
+.meta-post:after {
+left : auto;
+right: 0;
+}
+.share-post .share-title {
+float: right;
+font-family : BYekan ,"open-sans"!important;
+}
+.share-post {
+padding-right: 21px;
+padding-left : auto;
+}
+.share-post .menu-social-icons {
+float: left;
+}
+label.control-label {
+font-family: BYekan , "open-sans";
+}
+.comments-list .media > .pull-left {
+float: right !important;
+margin-left: 21px;
+margin-right : auto;
+}
+.meta-comm:after {
+left : auto;
+right: 0;
+}
+.shop-text {
+float: right;
+margin: 0px 0px 0 5px;
+}
+.comment-reply-link {
+left: 23px;
+right : auto;
+}
+.mobile-nav li .open-child:after {
+right: 50%;
+left : auto;
+position: relative;
+margin-right: -6px;
+margin-left : auto;
+}
+.mobile-nav li .open-child {
+float: left;
+left: -20px;
+right : auto;
+}
+.st-menu-content{
+direction : ltr;
+}
+.mobile-nav li > ul:before {
+right: 30px;
+left : auto;
+}
+.mobile-nav li > ul > li a {
+padding: 10px 35px 10px 0px;
+}
+.mobile-nav .links li a {
+text-align: right;
+font-family: 'BYekan',"open-sans";
+padding: 15px 10px 15px 0px;
+}
+
+.menu > li.menu-item-has-children > a:after {
+margin: 0 3px 0 0px;
+}
+.mobile-nav li .open-child {
+float: left;
+/* left: -20px; */
+right: auto;
+}
+.mobile-nav-heading i {
+margin-left: 10px;
+margin-right: auto;
+}
+#customer_login .col-sm-6{
+float : right;
+}
+element.style {
+}
+input[type="checkbox"] {
+float: right;
+margin-left: 10px;
+margin-right : auto;
+}
+.back-history:before {
+content: "\f105";
+margin: 0 0 0 9px;
+}
+.menu > li > a {
+float: right !important;
+}
+.banner-subtitle {
+    font-family: BYekan ,"open-sans" !important;
+    letter-spacing: 1px;
+}
+.blog-post-list .media > .pull-left {
+    margin: 0px 0px 0px 20px;
+    }
+
+.pull-left {
+    float: right !important;
+    }
+.sidebar-widget.etheme_widget_qr_code{
+text-align : center;
+}
+menu > li > a {
+    font-size: 14px !important;
+}
+.main-footer .widget-title {
+    text-align: right;
+}
+.fixed-header-area .nav-sublist-dropdown ul li {
+    text-align: right;
+}
+.widget-container .mymail-widget-text,
+.widget-container .mymail-widget-text p,
+.widget-container mymail-wrapper label{
+color : #eee;
+}
+footer .mymail-form label,
+.footer-top .rw-ui-content-recommendations > div a,
+.footer-top .blog-post-list .media-heading a,
+.smile_icon_list li .icon_description h3 {
+   
+    color: #ccc !important;
+}
+footer .vc_call_to_action hgroup h2 {
+  color : #8B7C98 !important;
+
+}
+#sc_chat_box {
+   left: 40px !important;
+   right : auto;
+}
+ul li.firstItem,
+ul li.lastItem{
+text-align : right !important;
+}
+code,pre {
+    direction: ltr !important;
+}
+.rw-ui-control.rw-ui-content-recommendations.rw-dir-ltr .rw-ui-group.rw-style-compact_thumbs .rw-ui-thumb-link {
+    right: 0px;
+left : auto;
+}
+.rw-ui-control.rw-ui-content-recommendations.rw-dir-ltr .rw-ui-group.rw-style-compact_thumbs .rw-ui-thumb-link {
+    right: 0px;
+}
+.rw-ui-content-recommendation > div {
+    margin-right : 70px;
+  margin-left : auto;
+}
+.menu .menu-full-width .nav-sublist-dropdown ul > li{
+float : right;
+}
+.fixed-header-area .menu .nav-sublist-dropdown {
+top: 30px;
+margin-top: 18px !important;
+}
+.menu .nav-sublist-dropdown {
+left : auto;
+right: -25%;
+}
+.menu .menu-full-width .nav-sublist-dropdown ul > li.lastItem {
+    margin-right: 10px;
+}
+.vc_btn-violet.vc_btn_outlined, a.vc_btn-violet.vc_btn_outlined, button.vc_btn-violet.vc_btn_outlined, .vc_btn-violet.vc_btn_square_outlined, a.vc_btn-violet.vc_btn_square_outlined, button.vc_btn-violet.vc_btn_square_outlined {
+color: #95017B !important;
+}
+.vc_btn-violet.vc_btn_3d, a.vc_btn-violet.vc_btn_3d, button.vc_btn-violet.vc_btn_3d {
+-webkit-box-shadow: 0 5px 0 #85047B;
+box-shadow: 0 5px 0 #85047B;
+}
+.vc_btn-violet, a.vc_btn-violet, button.vc_btn-violet {
+background-color: #95017B;
+}
+.vc_btn-violet:hover, a.vc_btn-violet:hover, button.vc_btn-violet:hover {
+background-color: #85047B;
+color: #f7f7f7 !important;
+}
+.vc_btn-violet:hover, a.vc_btn-violet:hover, button.vc_btn-violet:hover {
+background-color: #95017B;
+}
+.vc_btn-juicy_pink, a.vc_btn-juicy_pink, button.vc_btn-juicy_pink {
+background-color: #95017B;
+}
+.wp-polls .Buttons {
+background-color: #ccc;
+}
+.menu .nav-sublist-dropdown ul > li.menu-item-has-children > a:after {
+  content: "\f104";
+  right: auto;
+  left: 12px;
+    
+}
+.mfp-arrow.mfp-arrow-right::before {
+    right: 3px;
+}
+.mfp-arrow.mfp-arrow-left::before {
+   left: 14px;
+}
+.ubtn-sep-icon.ubtn-sep-icon-at-right .ubtn-icon {
+  right: 15px;
+  
+}
+
+/*---------woocommerce  ---------------*/
+.product-content-image {
+  overflow: hidden;
+}
+h4.zlarge-h.meta-title {
+  text-align: right;
+}
+h3.product-name.test-triggers {
+  text-align: right;
+}
+.product-information .price {
+  float: right;
+  font-family: BYekan ,"open-sans"!important;
+  text-align: right;
+  
+}
+button.single_add_to_cart_button.etheme-simple-product.button.alt {
+  font-family: BYekan ,"open-sans"!important;
+}
+.menu-social-icons li {
+  float: right;
+  
+}
+.product-information .menu-social-icons {
+  float: right;
+  
+}
+.owl-stage-outer.owl-height {
+  
+  height: inherit !important;
+}
+.owl-nav.disabled {
+  display: none;
+}
+.products-page-cats,.product-title,span.price,
+input.button,.product-name,.product-total,.cart-item,
+.cart-subtotal,.order-total,.payment_methods li label,
+.order-review input[type="submit"] ,
+tr.cart-subtotal th ,tr.order-total th,
+.product_list_widget .media-heading a,.small-coast,.product_meta,
+.product-information .yith-wcwl-add-to-wishlist a,
+.tabs .tab-title:first-child,.tabs .tab-title,.tabs .tab-content p,
+span.amount,.cart-item-details a,
+th.product-quantity,th.product-price,th.product-subtotal,
+a.checkout-button.button.alt.wc-forward,
+a.checkout-button.button.alt.wc-forward {
+  font-family: BYekan ,"open-sans"!important;
+}
+.emodal .emodal-text {
+  float: left;
+}
+.emodal .emodal-text .btn {
+    float: right;
+}
+.emodal img {
+  float: right;
+ }
+.step-title span {
+  padding-right : auto;
+  padding-left: 7px;
+}
+.step-title {
+  text-align : right;
+}
+.order-review .shop_table td.product-name {
+  text-align: right !important;
+}
+table th, table td {
+   text-align: right;
+}
+.owl-carousel.productCarousel.owl-theme div {
+  direction: ltr;
+}
+.quantity {
+    float: right;
+}
+.media>.pull-left {
+  margin-right: auto;
+  margin-left: 10px;
+}
+.close-order-li {
+  left: 0;
+  right : auto;
+}
+.product_list_widget .media > .pull-left {
+  margin-left: 15px;
+  margin-right : auto;
+}
+span.amount {
+  text-align: right;
+  display: inline-block;
+}
+
+a {
+  color : #3A3A3A;
+  font-size : 14px;
+}
+.tagcloud a {
+  color : #bbb;
+}
+.product-images div {
+  direction: ltr !important;
+}
+.product-content .col-md-6{
+float : right ;
+}
+.shop-table .table-bordered td.product-name img {
+  margin-right: auto;
+  margin-left: 10px;
+}
+.uavc-list-icon {
+margin-left : 10px;
+}
+form .form-row-last {
+  float: left;
+}
+form .form-row-first {
+  float: right;
+}
+.vc_custom_heading.vc_gitem-post-data.vc_gitem-post-data-source-post_title h4{
+text-align : right !important;
+}
+.vc_button-2-wrapper.vc_button-2-align-left {
+   text-align: right ;
+}
+
+.vc_button-2-wrapper.vc_button-2-align-left {
+  display: none !important;
+}
+.gallery-preview{
+display : none;
+}
+
+.tagcloud.post-tags {
+  margin-top: 30px;
+}
+.tagcloud.post-tags a {
+  color: #3A3A3A;
+ border-color: #3A3A3A;
+
+}
+.tagcloud.post-tags a:hover {
+  color:#991B7C;
+ border-color: #991B7C;
+
+}
+p {
+color : #3A3A3A;
+}
+.bc-type-5 .title{
+font-size : 34px;
+}
+
+
+@media only screen and (max-width: 992px)
+.menu > li > a {
+float: right !important;
+}
+@media only screen and (max-width: 1200px) {
+  .menu>li>a{
+    font-size: 14px !important;
+  }
+}
+li.side-menu{
+position : relative;
+border  : none;
+background-color: #efefef;
+border-bottom: 1px solid #ddd;
+padding : 0 40px 0 10px;
+}
+li.side-menu:hover,li.side-menu .sub-menu li:hover{
+  background-color : #ddd;
+}
+li.side-menu a{
+width : 100;
+}
+li.side-menu.fa:before{
+position : absolute;
+top : 12px;
+right : 10px;
+color : #991B7C;
+font-size : 160%;
+}
+li.side-menu.menu-item-has-children .sub-menu li a:before{
+content : "";
+}
+li.side-menu.menu-item-has-children:after{
+font-family: "FontAwesome";
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: inherit;
+    content: "\f104";
+    -webkit-font-smoothing: antialiased;
+    float: left;
+    line-height: 16px;
+    font-size: 16px;
+    margin-right: 10px;
+    padding-left: 10px;
+  position : absolute;
+  left : 10px;
+  top:  15px;
+}
+li.side-menu.menu-item-has-children>.sub-menu{
+display : none;
+min-width : 220px;
+z-index : 9998;
+position : absolute;
+top : -3%;
+right : 100%;
+
+
+}
+li.side-menu.menu-item-has-children>.sub-menu li{
+padding : 0 20px;
+background-color: #efefef;
+border-bottom: 1px solid #ddd;
+}
+li.side-menu.menu-item-has-children>.sub-menu li:hover{
+background-color: #ddd;
+}
+li.side-menu.menu-item-has-children:hover>.sub-menu{
+display : inline-block;
+
+}
+.widget_nav_menu {
+    z-index: 9900;
+}
+.menu-main-container{
+z-index : 9959;
+position : relative;
+}
+
+.navbar-right{
+z-index : 9999;
+position : relative;
+}
+
+cart-popup-container
+.header-type-6 .menu-wrapper .menu-main-container > ul .nav-sublist-dropdown ul li, .header-type-7 .menu-wrapper .menu-main-container > ul .nav-sublist-dropdown ul li, .header-type-8 .menu-wrapper .menu-main-container > ul .nav-sublist-dropdown ul li, .header-type-10 .menu-wrapper .menu-main-container > ul .nav-sublist-dropdown ul li, .header-type-12 .menu-wrapper .menu-main-container > ul .nav-sublist-dropdown ul li {
+    text-align: right;
+}
+.header-type-6 .menu-wrapper .menu-main-container > ul > li > a, .header-type-7 .menu-wrapper .menu-main-container > ul > li > a, .header-type-8 .menu-wrapper .menu-main-container > ul > li > a, .header-type-10 .menu-wrapper .menu-main-container > ul > li > a, .header-type-12 .menu-wrapper .menu-main-container > ul > li > a {
+    padding: 21px 10px;
+    font-size : 12px;
+}
+.header-type-8 .menu-wrapper .languages-area {
+   display : none;
+}
+.side-menu > li > a{
+font-size : 12px;
+width : 100%;
+
+}
+.header-type-8 .menu-wrapper .navbar-collapse {
+    float: right;
+    width: auto;
+}
+.header-type-8 .header-logo, .header-type-8 .navbar-header {
+    
+    text-align: right !important;
+}
+.header-type-8 .navbar-header .top-links {
+    position: absolute;
+    top: -40px;
+    left: 0;
+}
+
+.navbar-right .navbar-right {
+    float: left !important;
+    padding-left: 40px;
+}
+.header-logo img {
+    max-width: 320px;
+    float: right;
+}
+.header form.form-search{
+width : 500px;
+margin-top: 36px;
+}
+.header-type-8 .navbar-header .top-links {
+    position: absolute;
+    top: -40px;
+    left: 0;
+}
+.header form.form-search .search-cate,
+.header form.form-search .searchbox-submit,
+.header form.form-search .topsearch-entry,
+.header form.form-search  input.search-query.ipt1 {
+  
+float : right;
+}
+button.searchbox-submit:before{
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; 
+content : "\f002";
+font-size: 18px;
+    padding: 4px;
+}
+button.searchbox-submit{
+
+}
+select.sl_option {
+    
+    
+    background-position: 96% 50%;
+}
+div#user-submitted-posts fieldset input.usp-input,
+div#user-submitted-posts fieldset label,
+div#user-submitted-posts select,
+div#user-submitted-posts textarea.usp-textarea{
+    float: right;
+}
+
+
+
+/*---------------Header -------------------------*/
+
+.header-type-10 .header-logo, .header-type-10 .navbar-header {
+   
+    text-align: right !important;
+}
+.navbar-right .navbar-right {
+    float: left !important;
+}
+.cart-popup-container {
+    right: -209px;
+}
+.cart-popup-container:before {
+    left: 48px;
+}
+.header-type-10 .menu-wrapper .languages-area {
+    float: left;
+    padding: 16px 0;
+}
+.header-type-10 .menu-wrapper .navbar-collapse {
+    float: right;
+    width: auto;
+}
+.header-type-10 .navbar-header .top-links {
+    position: absolute;
+    top: -5px;
+    right: auto;
+    left : 370px;
+    width: 300px;
+}
+.header-type-10 .menu-wrapper .languages-area {
+    float: right;
+    padding: 10px 0 4px;
+}
+.header-type-6 .menu-wrapper .menu-main-container > ul > li > a, .header-type-7 .menu-wrapper .menu-main-container > ul > li > a, .header-type-8 .menu-wrapper .menu-main-container > ul > li > a, .header-type-10 .menu-wrapper .menu-main-container > ul > li > a, .header-type-12 .menu-wrapper .menu-main-container > ul > li > a {
+    padding: 16px 10px;
+    font-size: 12px;
+}
+/*-------------------new styles-----------------------------*/
+.cart-popup-container {
+    left: -22px;
+    right: auto;
+}
+.cart-popup-container:before {
+   margin-left: auto;
+   margin-right: 0px;
+}
+.main-header .top-links {
+    text-align: left;
+}
+
+.top-links .links{
+    padding:5px 20px;
+    float : left;
+}
+
+#lang_sel {
+    float: none;
+    text-align: right;
+}
+#lang_sel_list {
+   padding : 8px 20px;
+   display : inline-block;
+   float : right;
+}
+#lang_sel_list img.iclflag {
+     top: -1px;
+
+}
+
+
+#lang_sel_list ul a,#lang_sel_list a:visited {
+    background: #eee;
+}
+.top-links .links {
+    padding: 3px 15px;
+}
+@media only screen and (max-width: 500px){
+.top-links .links{
+    display : none;
+}
+.top-links{
+    text-align : center;
+}
+#lang_sel_list {
+   padding : 8px 15px;
+   display : inline-block;
+   float : none;
+}
+}
+
+/*---------------woocomerce -------------------------*/
+.col-md-6.address {
+    float: right;
+}
+.ico-sum:before {
+    left: auto;
+    right: 0%;
+}
+#lang_sel.icl_rtl {
+    text-align: right;
+    direction: rtl;
+    float: left;
+}
+
+.product-categories > li > ul a:before {
+    content: "\f104 ";
+}
+
+
+/*----------------Footer----------------------------------*/
+.copyright-payment.pull-right {
+    float: left !important;
+}
+
+
+/*----------------Contact form----------------------------------*/
+form.wpcf7-form{
+  text-align: right;
+}
+form.wpcf7-form p,form.wpcf7-form input{
+    float : right;
+    clear : both;
+    display : block;
+}
+
+
+/*----------------bootstrap----------------------------------*/
+
+@media (min-width: 768px)
+.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+    float: right;
+}
+
+
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+    float: right;
+}
