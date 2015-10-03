@@ -6,7 +6,7 @@ if( !class_exists("CMB2") ){
 require_once( 'library/cmb-functions.php' );
 
 
-include('library/suply-meta.php');
+require_once('library/country-codes.php');
 
 function delminco_child_ahoy() {
 
@@ -23,14 +23,15 @@ add_action( 'after_setup_theme', 'delminco_child_ahoy' );
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 function theme_enqueue_styles() {
     wp_enqueue_style( 'child-style', get_stylesheet_uri(), array( 'bootstrap', 'parent-style' ) );
+    wp_enqueue_style( 'flags-style', get_stylesheet_directory_uri().'/css/flags32.css', array() );
 
-    // custom jquery
-    wp_register_script( 'custom_js', get_stylesheet_uri() . '/js/jquery.custom.js', array( 'jquery','validation' ), '1.0', TRUE );
-    wp_enqueue_script( 'custom_js' );
+//     // custom jquery
+//     wp_register_script( 'custom_js', get_stylesheet_uri() . '/js/jquery.custom.js', array( 'jquery','validation' ), '1.0', TRUE );
+//     wp_enqueue_script( 'custom_js' );
  
-// validation
-    wp_register_script( 'validation', get_stylesheet_uri().'/js/jquery.validate.min.js', array( 'jquery' ) );
-    wp_enqueue_script( 'validation' );
+// // validation
+//     wp_register_script( 'validation', get_stylesheet_uri().'/js/jquery.validate.min.js', array( 'jquery' ) );
+//     wp_enqueue_script( 'validation' );
 }
 
 if ( ICL_LANGUAGE_CODE=='it' || ICL_LANGUAGE_CODE=='en'){ 
@@ -49,6 +50,33 @@ if ( ICL_LANGUAGE_CODE=='it' || ICL_LANGUAGE_CODE=='en'){
 
 }
 
+
+function delminco_template_chooser($template)   
+{    
+  global $wp_query;   
+  $post_type = get_query_var('post_type');   
+  if( $wp_query->is_search && $post_type == 'suply' )   
+  {
+    return locate_template('suply-search.php');  //  redirect to archive-search.php
+  }   
+  return $template;   
+}
+add_filter('template_include', 'delminco_template_chooser'); 
+
+
+function delminco_pagination(){
+  global $wp_query;
+      
+      $big = 999999999; 
+      echo paginate_links( array(
+        'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+        'format' => '?paged=%#%',
+        'current' => max( 1, get_query_var('paged') ),
+        'total' => $wp_query->max_num_pages,
+        'prev_text'    => __('<i class="fa fa-angle-double-right"></i>','naiau'),
+        'next_text'    => __('<i class="fa fa-angle-double-left"></i>','naiau')
+      ) );
+}
 /*-----------------user roles config functions -----------------------*/
 /*-----------------user roles config functions -----------------------*/
 /*-----------------user roles config functions -----------------------*/

@@ -27,43 +27,53 @@
 					
 					    <h2><?php the_title();?></h2>
 
-					    <div class="meta-post">
-                            <?php _e('Posted on', ETHEME_DOMAIN) ?>
-                            <?php the_time(get_option('date_format')); ?> 
-                            <?php _e('at', ETHEME_DOMAIN) ?> 
-                            <?php the_time(get_option('time_format')); ?>
-                                
-                    	</div>
-					    
+					    				    
 					    <div class="suply-info">
                         	<table class="suply-ifo-table">
-                    			<tr><td><?php 
+                    			<tr><td><strong><?php 
                     					
-                    					$sell_buy = get_post_meta($post->ID,'_suply_sell_buy');
+                    					$sell_buy = get_post_meta($post->ID,'_suply_sell_buy',1);
                     					if($sell_buy == 'sell'){
                     						$sell_buy_class = '';
                     					} else {
                     						$sell_buy_class = '';
                     					}
-                    					echo __('for : ','delminco').$sell_buy.'<i class="fa '.$sell_buy_class.'"></i>';
-                    				?></td></tr>
+                    					echo __('for : ','delminco').'</strong>'.$sell_buy.'<i class="fa '.$sell_buy_class.'"></i>';
+                    				?>
+                    			</td></tr>
+								
+								<tr><td><strong>
+									<?php
+									 	$country_code = get_usermeta($user_id,'_suplyer_country_code',1);
+									 	$country_array = country_array();
+									 	echo __('From Country : ','delminco').'</strong>'.'<span class="f32"><span class="flag '.$country_code.'"></span></span>  '.$country_array[$country_code].'  </span>';
+									?>
+								</td></tr>
 
-                    			<tr><td><?php echo __('Alloys : ','delminco').get_post_meta($post->ID,'_suply_alloys');?></td></tr>
-                    			<tr><td><?php echo __('Quantity : ','delminco').get_post_meta($post->ID,'_suply_qty');?></td></tr>
-                    			<tr><td><?php echo __('Product ID : ','delminco').$post->ID;?></td></tr>
+                    			<tr><td><strong><?php echo __('Alloys : ','delminco').'</strong>'.get_post_meta($post->ID,'_suply_alloys',1);?></td></tr>
+                    			<tr><td><strong><?php echo __('Quantity : ','delminco').'</strong>'.get_post_meta($post->ID,'_suply_qty',1);?></td></tr>
+                    			<tr><td><strong><?php echo __('Submit Date : ','delminco').'</strong>'.the_time(get_option('date_format')); ?></td></tr> 
+                    			<tr><td><strong><?php echo __('Product ID : ','delminco').$post->ID.'</strong>';?></td></tr>
+                    			<tr><td><strong>
+                    							<?php 
+                    									
+                    									$suply_cat = get_term( $suply_cat_id, 'suply_cat' );
+                    									echo __('Product Category : ','delminco').'</strong>'.get_the_term_list( $post->ID, 'suply_cat', ' ', '  -  ' );
+                    								?>
+                    			</td></tr>
                         		
                         	</table>
                         </div>
 
 					    <div class="content-article">
-                            <hr/>
+                           <!--  <hr/> -->
                             <?php the_content(); ?>
                         </div>
 
                         <div class="enquery-form">
 							<hr/>
 							<h4 class="enquery-title">
-								<?php echo __('Product Enquery Form','delminco');?>
+								<?php echo __('Product  Enquery  Form','delminco');?>
 							</h4>
 							<?php if(ICL_LANGUAGE_CODE == 'en'){
 					        	echo do_shortcode('[contact-form id="3"]');

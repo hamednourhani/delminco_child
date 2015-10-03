@@ -127,7 +127,7 @@ if(isset($_POST['submitted']) && isset($_POST['post_nonce_field']) && wp_verify_
 							</tr>
 						</fieldset>
 
-							<fieldset>
+						<fieldset>
 							<tr>	
 								<?php wp_nonce_field('post_nonce', 'post_nonce_field'); ?>
 

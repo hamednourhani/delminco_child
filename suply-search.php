@@ -22,16 +22,7 @@
 	}
 ?>
 
-<div class="page-heading bc-type-<?php esc_attr_e( $l['breadcrumb'] ); ?>">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 a-center">
-                <?php etheme_breadcrumbs(); ?>
-                <h1 class="title"><span><?php echo single_cat_title(); ?></span></h1>
-            </div>
-        </div>
-    </div>
-</div>
+<?php do_action( 'et_page_heading' ); ?>
 
 <div class="<?php echo (!$full_width) ? 'container' : 'blog-full-width'; ?>">
 	<div class="page-content sidebar-position-<?php esc_attr_e( $l['sidebar'] ); ?>">

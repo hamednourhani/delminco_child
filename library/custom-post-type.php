@@ -59,7 +59,7 @@ function suply_post_type() {
 			'map_meta_cap'        => true,
 			'hierarchical' => false,
 			/* the next one is important, it tells what's enabled in the post editor */
-			'supports' => array( 'title', 'editor', 'author','thumbnail', /*'excerpt', 'trackbacks', 'custom-fields', */'comments'/* 'revisions', 'sticky'*/)
+			'supports' => array( 'title', 'editor', /*'author','thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments'و 'revisions', 'sticky'*/)
 		) /* end of options */
 	); /* end of register post type */
 	
