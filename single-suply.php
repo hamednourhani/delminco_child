@@ -34,11 +34,11 @@
                     					
                     					$sell_buy = get_post_meta($post->ID,'_suply_sell_buy',1);
                     					if($sell_buy == 'sell'){
-                    						$sell_buy_class = '';
-                    					} else {
-                    						$sell_buy_class = '';
+	                    						$sell_buy_icon = '<i class="fa fa-arrow-up"></i>'.'   '.__('Sell','delminco');
+                    					} elseif($sell_buy == 'buy') {
+                    						$sell_buy_icon = '<i class="fa fa-arrow-down"></i>'.'   '.__('Buy','delminco');
                     					}
-                    					echo __('for : ','delminco').'</strong>'.$sell_buy.'<i class="fa '.$sell_buy_class.'"></i>';
+                    					echo __('for : ','delminco').'</strong>'.' '.$sell_buy_icon;
                     				?>
                     			</td></tr>
 								

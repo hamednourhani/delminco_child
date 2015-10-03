@@ -46,11 +46,11 @@
 										<td>
 											<?php $sell_buy = get_post_meta(get_the_ID(),'_suply_sell_buy',1);
 	                    					if($sell_buy == 'sell'){
-	                    						$sell_buy_class = '';
-	                    					} else {
-	                    						$sell_buy_class = '';
+	                    						$sell_buy_icon = '<i class="fa fa-arrow-up"></i>'.'   '.__('Sell','delminco');
+	                    					} elseif($sell_buy == 'buy') {
+	                    						$sell_buy_icon = '<i class="fa fa-arrow-down"></i>'.'   '.__('Buy','delminco');
 	                    					}
-	                    					echo '<i class="fa '.$sell_buy_class.'"></i>'.$sell_buy;?>
+	                    					echo $sell_buy_icon;?>
 										</td>
 										<td><a href="<?php echo get_the_permalink();?>"><?php the_title();?></a></td>
 										<td><?php the_time(get_option('date_format'));?></td>
