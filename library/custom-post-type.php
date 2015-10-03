@@ -99,26 +99,6 @@ function suply_post_type() {
 	);
 	
 	// now let's add custom tags (these act like categories)
-	register_taxonomy( 'suply_tag', 
-		array('suply'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
-		array('hierarchical' => false,    /* if this is false, it acts like tags */
-			'labels' => array(
-				'name' => __( 'suply Tags', 'delminco' ), /* name of the custom taxonomy */
-				'singular_name' => __( 'suply Tag', 'delminco' ), /* single taxonomy name */
-				'search_items' =>  __( 'Search suply Tags', 'delminco' ), /* search title for taxomony */
-				'all_items' => __( 'All suply Tags', 'delminco' ), /* all title for taxonomies */
-				'parent_item' => __( 'Parent suply Tag', 'delminco' ), /* parent title for taxonomy */
-				'parent_item_colon' => __( 'Parent suply Tag:', 'delminco' ), /* parent taxonomy title */
-				'edit_item' => __( 'Edit suply Tag', 'delminco' ), /* edit custom taxonomy title */
-				'update_item' => __( 'Update suply Tag', 'delminco' ), /* update title for taxonomy */
-				'add_new_item' => __( 'Add New suply Tag', 'delminco' ), /* add new title for taxonomy */
-				'new_item_name' => __( 'New suply Tag Name', 'delminco' ) /* name title for taxonomy */
-			),
-			'show_admin_column' => true,
-			'show_ui' => true,
-			'query_var' => true,
-			'show_in_nav_menus' => true,
-		)
-	);
+	
 
 ?>
