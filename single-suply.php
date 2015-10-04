@@ -32,7 +32,7 @@
                         	<table class="suply-ifo-table">
                     			<tr><td><strong><?php 
                     					
-                    					$sell_buy = get_post_meta($post->ID,'billing_country',1);
+                    					$sell_buy = get_post_meta($post->ID,'_suply_sell_buy',1);
                     					if($sell_buy == 'sell'){
 	                    						$sell_buy_icon = '<i class="fa fa-arrow-up"></i>'.'   '.__('Sell','delminco');
                     					} elseif($sell_buy == 'buy') {
