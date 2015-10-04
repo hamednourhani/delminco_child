@@ -75,10 +75,12 @@
 							<h4 class="enquery-title">
 								<?php echo __('Product  Enquery  Form','delminco');?>
 							</h4>
-							<?php if(ICL_LANGUAGE_CODE == 'en'){
-					        	echo do_shortcode('[contact-form id="3"]');
+							<?php
+							// contact form 7 shortcodes for product enquery.
+							 if(ICL_LANGUAGE_CODE == 'en'){
+					        	echo do_shortcode('[contact-form id="15354"]');
 					         }else{
-					         	echo do_shortcode('[contact-form id="4"]');
+					         	echo do_shortcode('[contact-form id="15352"]');
 					         } ?>
                         </div>
                  
