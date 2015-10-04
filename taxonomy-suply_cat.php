@@ -53,7 +53,7 @@
 								<?php while(have_posts()) : the_post(); ?>
 									<tr>
 										<td>
-											<?php $sell_buy = get_post_meta(get_the_ID(),'_suply_sell_buy',1);
+											<?php $sell_buy = get_post_meta(get_the_ID(),'billing_country',1);
 													
 	                    					if($sell_buy == 'sell'){
 	                    						$sell_buy_icon = '<i class="fa fa-arrow-up"></i>'.'   '.__('Sell','delminco');
@@ -66,11 +66,13 @@
 										<td><?php the_time(get_option('date_format'));?></td>
 										<td>
 											<?php
-											 	$country_code = get_usermeta($user_id,'_suplyer_country_code',1);
-											 	echo '<span class="f32"><span class="flag '.$country_code.'"></span></span>';
+												$user_id = get_the_author_ID();
+											 	$country_array = country_array();
+											 	$country_code = get_usermeta($user_id,'billing_country',1);
+											 	echo '<span class="f32">'.$country_array($country_code).' '.'<span class="flag '.strtolower($country_code).'"></span></span>';
 											?>
 										</td>
-										<td><? echo php get_the_ID();?></td>
+										<td><?php echo get_the_ID();?></td>
 									</tr>
 								<?php endwhile; ?>
 							</tbody>

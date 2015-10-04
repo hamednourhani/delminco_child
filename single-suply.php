@@ -32,7 +32,7 @@
                         	<table class="suply-ifo-table">
                     			<tr><td><strong><?php 
                     					
-                    					$sell_buy = get_post_meta($post->ID,'_suply_sell_buy',1);
+                    					$sell_buy = get_post_meta($post->ID,'billing_country',1);
                     					if($sell_buy == 'sell'){
 	                    						$sell_buy_icon = '<i class="fa fa-arrow-up"></i>'.'   '.__('Sell','delminco');
                     					} elseif($sell_buy == 'buy') {
@@ -44,9 +44,11 @@
 								
 								<tr><td><strong>
 									<?php
-									 	$country_code = get_usermeta($user_id,'_suplyer_country_code',1);
-									 	$country_array = country_array();
-									 	echo __('From Country : ','delminco').'</strong>'.'<span class="f32"><span class="flag '.$country_code.'"></span></span>  '.$country_array[$country_code].'  </span>';
+										$user_id = get_the_author_ID();
+											 	$country_array = country_array();
+											 	$country_code = get_usermeta($user_id,'billing_country',1);
+											 	
+									 	echo __('From Country : ','delminco').'</strong>'.'<span class="f32"><span class="flag '.strtolower($country_code).'"></span></span>  '.$country_array[$country_code].'  </span>';
 									?>
 								</td></tr>
 
