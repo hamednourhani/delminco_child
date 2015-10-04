@@ -34,7 +34,7 @@ function theme_enqueue_styles() {
 //     wp_enqueue_script( 'validation' );
 }
 
-if ( ICL_LANGUAGE_CODE=='it' || ICL_LANGUAGE_CODE=='en'){ 
+if ( ICL_LANGUAGE_CODE=='en'){ 
   
         remove_filter('the_title', 'ztjalali_persian_num');
         remove_filter('the_content', 'ztjalali_persian_num');
@@ -77,6 +77,68 @@ function delminco_pagination(){
         'next_text'    => __('<i class="fa fa-angle-double-left"></i>','naiau')
       ) );
 }
+
+/*-----------------------Shortcodes----------------------------*/
+function delminco_suply_in_sell_or_buy( $atts, $content = null ) {
+   global $wp_query;
+    $a = shortcode_atts( array(
+        'cat' => '',
+        'qty' => -1,
+        'icon' => 'fa-graduation-cap',
+        'show_more' => "true",
+        // ...etc
+    ), $atts );
+
+   
+
+$notifies = get_posts(array(
+                            'post_type' => 'notify',
+                            'posts_per_page' => $a['qty'],
+                            'notify_cat'         => $a['cat'],
+                            )
+                        );
+
+  $notify_cat_url = get_term_link($a['cat'],'notify_cat');
+  if(is_wp_error($notify_cat_url)){
+      $notify_cat_url = home_url('/').'?post_type=notify';
+  } 
+
+  
+  if(!empty($notifies)){
+    
+    
+     $notify_list = ''; 
+     foreach($notifies as $notify){
+        setup_postdata( $notify ) ;
+               
+        $notify_list .= '<li>';
+        $notify_list .= '<i class="fa '.$a['icon'].'"></i>';
+        $notify_list .= '<a href="'.get_the_permalink($notify->ID).'">';
+        $notify_list .= '<span>'.$notify->post_title.'</span>';
+        $notify_list .= '</a>';
+          
+        $notify_list .= '</li>';
+      } 
+    if($a['show_more'] == "true"){  
+        $notify_list .='<li><a href="'.$notify_cat_url.'">'.__('More Items ','naiau').'<i class="fa fa-long-arrow-left"></i></a></li>';
+    }
+      
+   
+  } 
+  return $notify_list;
+  wp_reset_query();
+}
+add_shortcode( 'suply', 'delminco_suply_in_sell_or_buy' );
+
+
+function delminco_page_permalink( $atts, $content = null ) {
+    global $post;
+    $a = shortcode_atts( array(), $atts );
+    
+    $page_permalink = get_the_permalink();
+    return $page_permalink;
+}
+add_shortcode( 'page-permalnik', 'delminco_page_permalink' );
 /*-----------------user roles config functions -----------------------*/
 /*-----------------user roles config functions -----------------------*/
 /*-----------------user roles config functions -----------------------*/

@@ -78,9 +78,9 @@
 							<?php
 							// contact form 7 shortcodes for product enquery.
 							 if(ICL_LANGUAGE_CODE == 'en'){
-					        	echo do_shortcode('[contact-form id="15354"]');
+					        	echo do_shortcode('[contact-form-7 id="15354"]');
 					         }else{
-					         	echo do_shortcode('[contact-form id="15352"]');
+					         	echo do_shortcode('[contact-form-7 id="15352"]');
 					         } ?>
                         </div>
                  
