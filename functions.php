@@ -139,6 +139,43 @@ function delminco_page_permalink( $atts, $content = null ) {
     return $page_permalink;
 }
 add_shortcode( 'page-permalnik', 'delminco_page_permalink' );
+
+
+/*-----------------------Shortcodes----------------------------*/
+/**
+* Add the input field to the form
+*
+* @param int $form_id
+* @param null|int $post_id
+* @param array $form_settings
+*/
+function delminco_render_user_country_code_hook( $form_id, $post_id, $form_settings ) {
+    
+  
+    
+        $user_id = get_current_user_id();
+        $suplyer_country_code = '';
+        if ($user_id) {
+           $suplyer_country_code = get_usermeta($user_id , $meta = '_suplyer_country_code');
+        }
+       $country_array = country_array(); 
+       ?>
+
+    <div class="wpuf-label">
+        <label><?php echo __('Country','deminco');?></label>
+    </div>
+  
+    <div class="wpuf-fields">
+        <select type="text" name="_suplyer_country_code"><?php //echo esc_attr( $value ); ?>
+            <?php foreach($country_array as $key=>$name){
+                echo '<option value="'.$key.'">'.$name.'</option>';
+            }?>
+        </select>
+    </div>
+    <?php
+}
+ 
+add_action( 'user_country_code_hook', 'delminco_render_user_country_code_hook', 10, 3 );
 /*-----------------user roles config functions -----------------------*/
 /*-----------------user roles config functions -----------------------*/
 /*-----------------user roles config functions -----------------------*/
