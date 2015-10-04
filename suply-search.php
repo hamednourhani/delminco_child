@@ -59,7 +59,7 @@
 												$user_id = get_the_author_ID();
 											 	$country_array = country_array();
 											 	$country_code = get_usermeta($user_id,'billing_country',1);
-											 	echo '<span class="f32">'.$country_array($country_code).' '.'<span class="flag '.strtolower($country_code).'"></span></span>';
+											 	echo '<span class="f32">'.$country_array[$country_code].' '.'<span class="flag '.strtolower($country_code).'"></span></span>';
 											?>
 										</td>
 										<td><?php echo get_the_ID();?></td>
