@@ -121,6 +121,7 @@ div#user-submitted-posts textarea.usp-textarea{
     background-color: #eee;
     height: 30px;
 }
+
 .top-links .languages-area {
     float: right;
     padding: 8px 0 4px;
@@ -158,6 +159,9 @@ div#user-submitted-posts textarea.usp-textarea{
 .top-links .links{
     padding:5px 20px;
 }
+.top-links .links {
+    margin-right: 200px;
+}
 
 #lang_sel {
     float: none;
@@ -167,6 +171,7 @@ div#user-submitted-posts textarea.usp-textarea{
    padding : 8px 20px;
    display : inline-block;
    float : left;
+   margin-left: 72px;
 }
 #lang_sel_list img.iclflag {
      top: -1px;

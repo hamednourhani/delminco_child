@@ -69,15 +69,22 @@
 									<tr><td><strong><?php echo __('Price : ','delminco').'</strong></td><td>'.get_post_meta($post->ID,'_suply_price',1);?></td></tr>
 										<?php 
 											$user = get_userdata( $user_id );
+											$resuma = get_usermeta($user_id,'_suply_user_resume',1);
 											if($sell_buy == 'sell'){
 												echo '<tr><td><strong>'.__('Seller Name : ','delminco').'</strong></td><td>'.$user->user_nicename.'</td></tr>';
 												echo '<tr><td><strong>'.__('Seller Phone : ','delminco').'</strong></td><td>'.get_usermeta($user_id,'billing_phone',1).'</td></tr>';
 												echo '<tr><td><strong>'.__('Seller Email : ','delminco').'</strong></td><td>'.$user->user_email.'</td></tr>';
-											                    						
+												if($resuma !== ''){
+													echo '<tr><td><strong>'.__('Seller Catalog : ','delminco').'</strong></td><td><a href="'.get_usermeta($user_id,'_suply_user_resume',1).'">'.__('Download Catalog','delminco').'</a></td></tr>';
+												}
+											                 						
 		                					} elseif($sell_buy == 'buy') {
 		                						echo '<tr><td><strong>'.__('Buyer Name : ','delminco').'</strong></td><td>'.$user->user_nicename.'</td></tr>';
 												echo '<tr><td><strong>'.__('Buyer Phone : ','delminco').'</strong></td><td>'.get_usermeta($user_id,'billing_phone',1).'</td></tr>';
 												echo '<tr><td><strong>'.__('Buyer Email : ','delminco').'</strong></td><td>'.$user->user_email.'</td></tr>';
+												if($resuma !== ''){
+													echo '<tr><td><strong>'.__('Buyer Catalog : ','delminco').'</strong></td><td><a href="'.get_usermeta($user_id,'_suply_user_resume',1).'">'.__('Download Catalog','delminco').'</a></td></tr>';
+												}
 		                					}
                     			
                     			 }?>

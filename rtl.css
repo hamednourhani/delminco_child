@@ -63,6 +63,9 @@ text-align: right;
 left : 0;
 right: -10px;
 }
+.top-links .links {
+    margin-left: 200px;
+}
 .meta-post:after {
 left : auto;
 right: 0;
@@ -661,6 +664,7 @@ div#user-submitted-posts textarea.usp-textarea{
    padding : 8px 20px;
    display : inline-block;
    float : right;
+   margin-right: 72px;
 }
 #lang_sel_list img.iclflag {
      top: -1px;
@@ -742,5 +746,7 @@ ul.wpuf-form li .wpuf-label {
     width: 25%;
 }
 
-
+.wpuf-fields select {
+   background-position: 6% 46%;
+}
 

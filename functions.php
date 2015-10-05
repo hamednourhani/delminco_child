@@ -179,12 +179,9 @@ function delminco_render_user_country_code_hook( $form_id, $post_id, $form_setti
     
   
     
-        $user_id = get_current_user_id();
-        $suplyer_country_code = 'IR';
-
-        if ($user_id) {
-           $suplyer_country_code = get_usermeta($user_id , $meta = 'billing_country');
-        }
+              
+       $suplyer_country_code = get_user_meta($post_id ,'billing_country',1);
+              
        $country_array = country_array(); 
        //var_dump($suplyer_country_code);
        ?>
@@ -194,7 +191,7 @@ function delminco_render_user_country_code_hook( $form_id, $post_id, $form_setti
     </div>
   
     <div class="wpuf-fields">
-        <select type="text" name="billing_country"><?php //echo esc_attr( $value ); ?>
+        <select name="billing_country"><?php //echo esc_attr( $value ); ?>
             <?php foreach($country_array as $key=>$name){
                 if($suplyer_country_code == $key){
                   echo '<option value="'.$key.'"selected >'.$name.'</option>';
@@ -211,12 +208,14 @@ function delminco_render_user_country_code_hook( $form_id, $post_id, $form_setti
 add_action( 'user_country_code_hook', 'delminco_render_user_country_code_hook', 10, 3 );
 
 function delminco_after_user_registration( $user_id, $userdata, $form_id, $form_settings ) {
+   
     if ( isset( $_POST['billing_country'] ) ) {
-        update_post_meta( $user_id, 'billing_country', $_POST['billing_country'] );
+        update_user_meta( $user_id, 'billing_country', $_POST['billing_country'] );
     }
 }
  
 add_action( 'wpuf_after_register', 'delminco_after_user_registration' );
+add_action( 'wpuf_update_profile', 'delminco_after_user_registration' );
 
 /*-----------------query vars -----------------------*/
 add_filter( 'query_vars', 'delminco_custom_query_vars' );
