@@ -30,13 +30,13 @@
                 <h1 class="title"><span>
                 	<?php $sb_type = get_query_var('sb_type');
                 			if(isset($sb_type) && $sb_type=='sell'){
-                				echo __('Products for Sell','Delminco'); 
+                				echo __('Products for Sell','delminco'); 
                 			
                 			} elseif(isset($sb_type) && $sb_type=='buy'){
-                				echo __('Products for Buy','Delminco'); 
+                				echo __('Products for Buy','delminco'); 
 
                 			}else{
-                				echo __('Products for Sell and Buy','Delminco'); 
+                				echo __('Products for Sell and Buy','delminco'); 
           
                 			}
                 	?>

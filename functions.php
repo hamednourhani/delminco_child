@@ -143,9 +143,9 @@ $suplies = get_posts(array(
              $suply_list .= '</table>';
              if($a['show_more'] == true){
                 if ( ICL_LANGUAGE_CODE=='en'){
-                  $suply_list .= '<a href="'.add_query_arg(array('post_type'=>'suply','sb_type'=>$a['sb_type'],'lang'=>'en'),site_url().'/').'" class="more-suply">'__('More Products','delminco').'</a>';
+                  $suply_list .= '<a href="'.add_query_arg(array('post_type'=>'suply','sb_type'=>$a['sb_type'],'lang'=>'en'),site_url().'/').'" class="more-suply">'.__('More Products','delminco').'</a>';
                 } else{
-                  $suply_list .= '<a href="'.add_query_arg(array('post_type'=>'suply','sb_type'=>$a['sb_type']),site_url().'/').'" class="more-suply">'__('More Products','delminco').'</a>';
+                  $suply_list .= '<a href="'.add_query_arg(array('post_type'=>'suply','sb_type'=>$a['sb_type']),site_url().'/').'" class="more-suply">'.__('More Products','delminco').'</a>';
                 }
               }
            
