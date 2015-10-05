@@ -549,6 +549,14 @@ width : 100%;
 width : 500px;
 margin-top: 36px;
 }
+.header form.form-search .exchange-type{
+    float : right;
+    /*padding-top : 10px;*/
+
+}
+/*.exchange-type input,.exchange-type label{
+    padding : 0px 10px;
+}*/
 .header-type-8 .navbar-header .top-links {
     position: absolute;
     top: -40px;
@@ -733,3 +741,6 @@ ul.wpuf-form li .wpuf-label {
     float: right;
     width: 25%;
 }
+
+
+

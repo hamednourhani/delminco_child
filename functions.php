@@ -23,7 +23,7 @@ add_action( 'after_setup_theme', 'delminco_child_ahoy' );
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 function theme_enqueue_styles() {
     wp_enqueue_style( 'child-style', get_stylesheet_uri(), array( 'bootstrap', 'parent-style' ) );
-    wp_enqueue_style( 'flags-style', get_stylesheet_directory_uri().'/css/flags32.css', array() );
+    wp_enqueue_style( 'flags-style', get_stylesheet_directory_uri().'/css/flags16.css', array() );
 
 //     // custom jquery
 //     wp_register_script( 'custom_js', get_stylesheet_uri() . '/js/jquery.custom.js', array( 'jquery','validation' ), '1.0', TRUE );
@@ -45,7 +45,7 @@ if ( ICL_LANGUAGE_CODE=='en'){
         remove_filter('the_title', 'ztjalali_ch_arabic_to_persian');
         remove_filter('the_excerpt', 'ztjalali_ch_arabic_to_persian');
         remove_filter('comment_text', 'ztjalali_ch_arabic_to_persian');
-    
+        remove_filter('date_i18n', 'ztjalali_ch_date_i18n',111);
 
 
 }
@@ -82,50 +82,76 @@ function delminco_pagination(){
 function delminco_suply_in_sell_or_buy( $atts, $content = null ) {
    global $wp_query;
     $a = shortcode_atts( array(
-        'cat' => '',
+        
         'qty' => -1,
-        'icon' => 'fa-graduation-cap',
-        'show_more' => "true",
+        'sb_type' => '',
+        'show_more' => true,
         // ...etc
     ), $atts );
 
    
 
-$notifies = get_posts(array(
-                            'post_type' => 'notify',
+$suplies = get_posts(array(
+                            'post_type' => 'suply',
                             'posts_per_page' => $a['qty'],
-                            'notify_cat'         => $a['cat'],
+                            'meta_key'         => '_suply_sell_buy',
+                            'meta_value'         => $a['sb_type'],
                             )
                         );
 
-  $notify_cat_url = get_term_link($a['cat'],'notify_cat');
-  if(is_wp_error($notify_cat_url)){
-      $notify_cat_url = home_url('/').'?post_type=notify';
-  } 
-
   
-  if(!empty($notifies)){
+
+    $suply_list = '';
     
-    
-     $notify_list = ''; 
-     foreach($notifies as $notify){
-        setup_postdata( $notify ) ;
-               
-        $notify_list .= '<li>';
-        $notify_list .= '<i class="fa '.$a['icon'].'"></i>';
-        $notify_list .= '<a href="'.get_the_permalink($notify->ID).'">';
-        $notify_list .= '<span>'.$notify->post_title.'</span>';
-        $notify_list .= '</a>';
-          
-        $notify_list .= '</li>';
-      } 
-    if($a['show_more'] == "true"){  
-        $notify_list .='<li><a href="'.$notify_cat_url.'">'.__('More Items ','naiau').'<i class="fa fa-long-arrow-left"></i></a></li>';
-    }
-      
-   
-  } 
-  return $notify_list;
+     if(!empty($suplies)){ 
+            setup_postdata($suplies ); 
+            $suply_list .= '<table class="suply-archive-table">';
+              $suply_list .= '<tbody>';
+                $suply_list .= '<tr>';
+                  $suply_list .= '<th>'. __('For','delminco').'</th>';
+                  $suply_list .= '<th>'. __('Name','delminco').'</th>';
+                  $suply_list .= '<th>'. __('Date','delminco').'</th>';
+                  $suply_list .= '<th>'.__('Country','delminco').'</th>';
+                  $suply_list .= '<th>'. __('ID','delminco').'</th>';
+                $suply_list .= '</tr>';
+              
+               foreach($suplies as $suply){; 
+                  $suply_list .= '<tr>';
+                     $suply_list .= '<td>';
+                       $sell_buy = get_post_meta($suply->ID,'_suply_sell_buy',1);
+                                if($sell_buy == 'sell'){
+                                  $sell_buy_icon = '<i class="fa fa-arrow-up"></i>'.'   '.__('Sell','delminco');
+                                } elseif($sell_buy == 'buy') {
+                                  $sell_buy_icon = '<i class="fa fa-arrow-down"></i>'.'   '.__('Buy','delminco');
+                                }
+                                $suply_list .=  $sell_buy_icon;
+                     $suply_list .= '</td>';
+                     $suply_list .= '<td><a href="'. get_the_permalink($suply->ID).'">'.$suply->post_title.'</a></td>';
+                     $suply_list .= '<td>'.get_the_date(get_option('date_format'),$suply->ID).'</td>';
+                     $suply_list .= '<td>';
+                      
+                        $user_id = $suply->post_author;
+                        $country_array = country_array();
+                        $country_code = get_usermeta($user_id,'billing_country',1);
+                         $suply_list .= '<span class="f16 country-flag"><span class="flag '.strtolower($country_code).'"></span>'.'  '.$country_array[$country_code].'</span>';
+                     
+                     $suply_list .= '</td>';
+                     $suply_list .= '<td>'.$suply->ID.'</td>';
+                   $suply_list .= '</tr>';
+                }
+               $suply_list .= '</tbody>';
+             $suply_list .= '</table>';
+             if($a['show_more'] == true){
+                if ( ICL_LANGUAGE_CODE=='en'){
+                  $suply_list .= '<a href="'.add_query_arg(array('post_type'=>'suply','sb_type'=>$a['sb_type'],'lang'=>'en'),site_url().'/').'" class="more-suply">More Products</a>';
+                } else{
+                  $suply_list .= '<a href="'.add_query_arg(array('post_type'=>'suply','sb_type'=>$a['sb_type']),site_url().'/').'" class="more-suply">More Products</a>';
+                }
+              }
+           
+        }
+        //print_filters_for('the_date');
+  return $suply_list;
   wp_reset_query();
 }
 add_shortcode( 'suply', 'delminco_suply_in_sell_or_buy' );
@@ -192,8 +218,36 @@ function delminco_after_user_registration( $user_id, $userdata, $form_id, $form_
  
 add_action( 'wpuf_after_register', 'delminco_after_user_registration' );
 
-/*-----------------user roles config functions -----------------------*/
-/*-----------------user roles config functions -----------------------*/
+/*-----------------query vars -----------------------*/
+add_filter( 'query_vars', 'delminco_custom_query_vars' );
+function delminco_custom_query_vars( $query_vars ){
+    $query_vars[] = 'sb_type';
+    
+    return $query_vars;
+}
+
+
+function delminco_sell_buy_archive_query_vars( $query ) {
+    if ( $query->is_archive() && $query->is_main_query() ) {
+        $sb_type = get_query_var('sb_type');
+        if(isset($sb_type)){
+          $query->set( 'meta_key' ,'_suply_sell_buy' );
+          $query->set( 'meta_value', $sb_type );
+        }
+    }
+}
+add_action( 'pre_get_posts', 'delminco_sell_buy_archive_query_vars' );
+
+/*-----------------print_filters for special hook -----------------------*/
+function print_filters_for( $hook = '' ) {
+    global $wp_filter;
+    if( empty( $hook ) || !isset( $wp_filter[$hook] ) )
+        return;
+
+    print '<pre>';
+    print_r( $wp_filter[$hook] );
+    print '</pre>';
+}
 /*-----------------user roles config functions -----------------------*/
 // function delminco_profile_admin_css() {
 //     $screen_id = isset( get_current_screen()->id ) ? get_current_screen()->id : null;

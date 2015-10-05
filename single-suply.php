@@ -29,7 +29,7 @@
 
 					    				    
 					    <div class="suply-info">
-                        	<table class="suply-ifo-table">
+                        	<table class="suply-single-table">
                     			<tr><td><strong><?php 
                     					
                     					$sell_buy = get_post_meta($post->ID,'_suply_sell_buy',1);
@@ -38,7 +38,7 @@
                     					} elseif($sell_buy == 'buy') {
                     						$sell_buy_icon = '<i class="fa fa-arrow-down"></i>'.'   '.__('Buy','delminco');
                     					}
-                    					echo __('for : ','delminco').'</strong>'.' '.$sell_buy_icon;
+                    					echo __('for : ','delminco').'</strong></td><td>'.' '.$sell_buy_icon;
                     				?>
                     			</td></tr>
 								
@@ -48,21 +48,39 @@
 											 	$country_array = country_array();
 											 	$country_code = get_usermeta($user_id,'billing_country',1);
 											 	
-									 	echo __('From Country : ','delminco').'</strong>'.'<span class="f32"><span class="flag '.strtolower($country_code).'"></span></span>  '.$country_array[$country_code].'  </span>';
+									 	echo __('From Country : ','delminco').'</strong></td><td><span class="f16 country-flag"><span class="flag '.strtolower($country_code).'"></span>'.'  '.$country_array[$country_code].'</span>';
 									?>
 								</td></tr>
 
-                    			<tr><td><strong><?php echo __('Alloys : ','delminco').'</strong>'.get_post_meta($post->ID,'_suply_alloys',1);?></td></tr>
-                    			<tr><td><strong><?php echo __('Quantity : ','delminco').'</strong>'.get_post_meta($post->ID,'_suply_qty',1);?></td></tr>
-                    			<tr><td><strong><?php echo __('Submit Date : ','delminco').'</strong>'.the_time(get_option('date_format')); ?></td></tr> 
-                    			<tr><td><strong><?php echo __('Product ID : ','delminco').$post->ID.'</strong>';?></td></tr>
+                    			<tr><td><strong><?php echo __('Alloys : ','delminco').'</strong></td><td>'.get_post_meta($post->ID,'_suply_alloys',1);?></td></tr>
+                    			<tr><td><strong><?php echo __('Quantity : ','delminco').'</strong></td><td>'.get_post_meta($post->ID,'_suply_qty',1);?></td></tr>
+                    			<tr><td><strong><?php echo __('Submit Date : ','delminco').'</strong></td><td>'.get_the_time(get_option('date_format')); ?></td></tr> 
+                    			<tr><td><strong><?php echo __('Product ID : ','delminco').'</strong></td><td>'.$post->ID;?></td></tr>
                     			<tr><td><strong>
                     							<?php 
                     									
                     									$suply_cat = get_term( $suply_cat_id, 'suply_cat' );
-                    									echo __('Product Category : ','delminco').'</strong>'.get_the_term_list( $post->ID, 'suply_cat', ' ', '  -  ' );
+                    									echo __('Product Category : ','delminco').'</strong></td><td>'.get_the_term_list( $post->ID, 'suply_cat', ' ', '  -  ' );
                     								?>
                     			</td></tr>
+
+                    			<?php if(current_user_can('edit_posts') || $user_id == get_current_user_id()){ ?>
+								
+									<tr><td><strong><?php echo __('Price : ','delminco').'</strong></td><td>'.get_post_meta($post->ID,'_suply_price',1);?></td></tr>
+										<?php 
+											$user = get_userdata( $user_id );
+											if($sell_buy == 'sell'){
+												echo '<tr><td><strong>'.__('Seller Name : ','delminco').'</strong></td><td>'.$user->user_nicename.'</td></tr>';
+												echo '<tr><td><strong>'.__('Seller Phone : ','delminco').'</strong></td><td>'.get_usermeta($user_id,'billing_phone',1).'</td></tr>';
+												echo '<tr><td><strong>'.__('Seller Email : ','delminco').'</strong></td><td>'.$user->user_email.'</td></tr>';
+											                    						
+		                					} elseif($sell_buy == 'buy') {
+		                						echo '<tr><td><strong>'.__('Buyer Name : ','delminco').'</strong></td><td>'.$user->user_nicename.'</td></tr>';
+												echo '<tr><td><strong>'.__('Buyer Phone : ','delminco').'</strong></td><td>'.get_usermeta($user_id,'billing_phone',1).'</td></tr>';
+												echo '<tr><td><strong>'.__('Buyer Email : ','delminco').'</strong></td><td>'.$user->user_email.'</td></tr>';
+		                					}
+                    			
+                    			 }?>
                         		
                         	</table>
                         </div>
@@ -75,7 +93,12 @@
                         <div class="enquery-form">
 							<hr/>
 							<h4 class="enquery-title">
-								<?php echo __('Product  Enquery  Form','delminco');?>
+								<?php if($sell_buy == 'sell'){
+	                    						echo __('Buy Product From Seller','delminco');
+                    					} elseif($sell_buy == 'buy') {
+                    						echo __('Sell product to Buyer','delminco');
+                    					}
+                    			?>
 							</h4>
 							<?php
 							// contact form 7 shortcodes for product enquery.
@@ -111,7 +134,7 @@
 
 				<?php endwhile; else: ?>
 
-					<h1><?php _e('No posts were found!', ETHEME_DOMAIN) ?></h1>
+					<h1><?php _e('No products were found!', ETHEME_DOMAIN) ?></h1>
 
 				<?php endif; ?>
 

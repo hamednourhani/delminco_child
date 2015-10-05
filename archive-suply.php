@@ -27,7 +27,20 @@
         <div class="row">
             <div class="col-md-12 a-center">
                 <?php etheme_breadcrumbs(); ?>
-                <h1 class="title"><span><?php echo single_cat_title(); ?></span></h1>
+                <h1 class="title"><span>
+                	<?php $sb_type = get_query_var('sb_type');
+                			if(isset($sb_type) && $sb_type=='sell'){
+                				echo __('Products for Sell','Delminco'); 
+                			
+                			} elseif(isset($sb_type) && $sb_type=='buy'){
+                				echo __('Products for Buy','Delminco'); 
+
+                			}else{
+                				echo __('Products for Sell and Buy','Delminco'); 
+          
+                			}
+                	?>
+                </span></h1>
             </div>
         </div>
     </div>
@@ -39,7 +52,8 @@
 			<div class="content <?php esc_attr_e( $l['content-class'] ); ?>">
 		
 				<div class="<?php if ($content_layout == 'grid'): ?>blog-masonry row<?php endif ?>">
-					<?php if(have_posts()): ?>
+					<?php
+					if(have_posts()): ?>
 						<table class="suply-archive-table">
 							<tbody>
 								<tr>

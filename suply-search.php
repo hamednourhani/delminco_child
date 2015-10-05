@@ -31,7 +31,7 @@
 		
 				<div class="<?php if ($content_layout == 'grid'): ?>blog-masonry row<?php endif ?>">
 					<?php if(have_posts()): ?>
-						<table>
+						<table class="suply-archive-table">
 							<tbody>
 								<tr>
 									<th><?php echo __('For','delminco');?></th>
@@ -59,7 +59,7 @@
 												$user_id = get_the_author_ID();
 											 	$country_array = country_array();
 											 	$country_code = get_usermeta($user_id,'billing_country',1);
-											 	echo '<span class="f32">'.$country_array[$country_code].' '.'<span class="flag '.strtolower($country_code).'"></span></span>';
+											 	echo '<span class="f16 country-flag"><span class="flag '.strtolower($country_code).'"></span>'.'  '.$country_array[$country_code].'</span>';
 											?>
 										</td>
 										<td><?php echo get_the_ID();?></td>
@@ -69,7 +69,7 @@
 						</table>
 					<?php else: ?>
 
-						<h1><?php _e('No posts were found!', ET_DOMAIN) ?></h1>
+						<h1><?php _e('No products were found!', ET_DOMAIN) ?></h1>
 
 					<?php endif; ?>
 				</div>
