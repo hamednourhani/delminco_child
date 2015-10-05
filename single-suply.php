@@ -119,7 +119,7 @@
 					
 						<?php if(etheme_get_option('post_share')): ?>
 							<div class="share-post">
-								<?php echo do_shortcode('[share title="'.__('Share Product', ETHEME_DOMAIN).'"]'); ?>
+								<?php echo do_shortcode('[share title="'.__('Share Product', 'delminco').'"]'); ?>
 							</div>
 						<?php endif; ?>
 						
