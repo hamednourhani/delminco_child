@@ -1,0 +1,1300 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Delminco Child\n"
+"POT-Creation-Date: 2015-10-05 14:14+0330\n"
+"PO-Revision-Date: 2015-10-05 14:14+0330\n"
+"Last-Translator: \n"
+"Language-Team: iTstar <info@itstar.ir>\n"
+"Language: fa_IR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.3\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: library/cmb\n"
+"X-Poedit-SearchPathExcluded-1: library/flags\n"
+
+#: archive-suply.php:33
+msgid "Products for Sell"
+msgstr "محصولات ثبت شده  برای فروش"
+
+#: archive-suply.php:36
+msgid "Products for Buy"
+msgstr "محصولات درخواست شده برای خرید"
+
+#: archive-suply.php:39
+msgid "Products for Sell and Buy"
+msgstr "محصولات ثبت شده"
+
+#: archive-suply.php:60 functions.php:111 suply-search.php:37
+#: taxonomy-suply_cat.php:46
+msgid "For"
+msgstr "برای"
+
+#: archive-suply.php:61 functions.php:112 suply-search.php:38
+#: taxonomy-suply_cat.php:47
+msgid "Name"
+msgstr "نام"
+
+#: archive-suply.php:62 functions.php:113 suply-search.php:39
+#: taxonomy-suply_cat.php:48
+msgid "Date"
+msgstr "تاریخ ثبت"
+
+#: archive-suply.php:63 functions.php:114 suply-search.php:40
+#: taxonomy-suply_cat.php:49
+msgid "Country"
+msgstr "کشور"
+
+#: archive-suply.php:64 functions.php:115 suply-search.php:41
+#: taxonomy-suply_cat.php:50
+msgid "ID"
+msgstr ""
+
+#: archive-suply.php:73 functions.php:123 library/suply-meta.php:45 page
+#: templates/template-edit-suplys.php:124
+#: templates/template-insert-suplys.php:97 single-suply.php:37
+#: suply-search.php:49 taxonomy-suply_cat.php:59
+msgid "Sell"
+msgstr "فروش"
+
+#: archive-suply.php:75 functions.php:125 library/suply-meta.php:46 page
+#: templates/template-edit-suplys.php:125
+#: templates/template-insert-suplys.php:98 single-suply.php:39
+#: suply-search.php:51 taxonomy-suply_cat.php:61
+msgid "Buy"
+msgstr "خرید"
+
+#: archive-suply.php:96 single-suply.php:144 suply-search.php:72
+#: taxonomy-suply_cat.php:82
+msgid "No products were found!"
+msgstr "هیچ محصولی یافت نشد"
+
+#: functions.php:76
+msgid "<i class=\"fa fa-angle-double-right\"></i>"
+msgstr ""
+
+#: functions.php:77
+msgid "<i class=\"fa fa-angle-double-left\"></i>"
+msgstr ""
+
+#: functions.php:146 functions.php:148
+msgid "More Products"
+msgstr "موارد بیشتر"
+
+#: functions.php:190
+msgid "Country Name"
+msgstr "نام کشور"
+
+#: library/country-codes.php:4
+msgid "AFGHANISTAN"
+msgstr ""
+
+#: library/country-codes.php:5
+msgid "ILAND ISLANDS"
+msgstr ""
+
+#: library/country-codes.php:6
+msgid "ALBANIA"
+msgstr ""
+
+#: library/country-codes.php:7
+msgid "ALGERIA"
+msgstr ""
+
+#: library/country-codes.php:8
+msgid "AMERICAN SAMOA"
+msgstr ""
+
+#: library/country-codes.php:9
+msgid "ANDORRA"
+msgstr ""
+
+#: library/country-codes.php:10
+msgid "ANGOLA"
+msgstr ""
+
+#: library/country-codes.php:11
+msgid "ANGUILLA"
+msgstr ""
+
+#: library/country-codes.php:12
+msgid "ANTARCTICA"
+msgstr ""
+
+#: library/country-codes.php:13
+msgid "ANTIGUA AND BARBUDA"
+msgstr ""
+
+#: library/country-codes.php:14
+msgid "ARGENTINA"
+msgstr ""
+
+#: library/country-codes.php:15
+msgid "ARMENIA"
+msgstr ""
+
+#: library/country-codes.php:16
+msgid "ARUBA"
+msgstr ""
+
+#: library/country-codes.php:17
+msgid "AUSTRALIA"
+msgstr ""
+
+#: library/country-codes.php:18
+msgid "AUSTRIA"
+msgstr ""
+
+#: library/country-codes.php:19
+msgid "AZERBAIJAN"
+msgstr ""
+
+#: library/country-codes.php:20
+msgid "BAHAMAS"
+msgstr ""
+
+#: library/country-codes.php:21
+msgid "BAHRAIN"
+msgstr ""
+
+#: library/country-codes.php:22
+msgid "BANGLADESH"
+msgstr ""
+
+#: library/country-codes.php:23
+msgid "BARBADOS"
+msgstr ""
+
+#: library/country-codes.php:24
+msgid "BELARUS"
+msgstr ""
+
+#: library/country-codes.php:25
+msgid "BELGIUM"
+msgstr ""
+
+#: library/country-codes.php:26
+msgid "BELIZE"
+msgstr ""
+
+#: library/country-codes.php:27
+msgid "BENIN"
+msgstr ""
+
+#: library/country-codes.php:28
+msgid "BERMUDA"
+msgstr ""
+
+#: library/country-codes.php:29
+msgid "BHUTAN"
+msgstr ""
+
+#: library/country-codes.php:30
+msgid "BOLIVIA, PLURINATIONAL STATE OF"
+msgstr ""
+
+#: library/country-codes.php:31
+msgid "BOSNIA AND HERZEGOVINA"
+msgstr ""
+
+#: library/country-codes.php:32
+msgid "BOTSWANA"
+msgstr ""
+
+#: library/country-codes.php:33
+msgid "BOUVET ISLAND"
+msgstr ""
+
+#: library/country-codes.php:34
+msgid "BRAZIL"
+msgstr ""
+
+#: library/country-codes.php:35
+msgid "BRITISH INDIAN OCEAN TERRITORY"
+msgstr ""
+
+#: library/country-codes.php:36
+msgid "BRUNEI DARUSSALAM"
+msgstr ""
+
+#: library/country-codes.php:37
+msgid "BULGARIA"
+msgstr ""
+
+#: library/country-codes.php:38
+msgid "BURKINA FASO"
+msgstr ""
+
+#: library/country-codes.php:39
+msgid "BURUNDI"
+msgstr ""
+
+#: library/country-codes.php:40
+msgid "CAMBODIA"
+msgstr ""
+
+#: library/country-codes.php:41
+msgid "CAMEROON"
+msgstr ""
+
+#: library/country-codes.php:42
+msgid "CANADA"
+msgstr ""
+
+#: library/country-codes.php:43
+msgid "CAPE VERDE"
+msgstr ""
+
+#: library/country-codes.php:44
+msgid "CAYMAN ISLANDS"
+msgstr ""
+
+#: library/country-codes.php:45
+msgid "CENTRAL AFRICAN REPUBLIC"
+msgstr ""
+
+#: library/country-codes.php:46
+msgid "CHAD"
+msgstr ""
+
+#: library/country-codes.php:47
+msgid "CHILE"
+msgstr ""
+
+#: library/country-codes.php:48
+msgid "CHINA"
+msgstr ""
+
+#: library/country-codes.php:49
+msgid "CHRISTMAS ISLAND"
+msgstr ""
+
+#: library/country-codes.php:50
+msgid "COCOS (KEELING) ISLANDS"
+msgstr ""
+
+#: library/country-codes.php:51
+msgid "COLOMBIA"
+msgstr ""
+
+#: library/country-codes.php:52
+msgid "COMOROS"
+msgstr ""
+
+#: library/country-codes.php:53
+msgid "CONGO"
+msgstr ""
+
+#: library/country-codes.php:54
+msgid "CONGO, THE DEMOCRATIC REPUBLIC OF THE"
+msgstr ""
+
+#: library/country-codes.php:55
+msgid "COOK ISLANDS"
+msgstr ""
+
+#: library/country-codes.php:56
+msgid "COSTA RICA"
+msgstr ""
+
+#: library/country-codes.php:57
+msgid "COTE D IVOIRE"
+msgstr ""
+
+#: library/country-codes.php:58
+msgid "CROATIA"
+msgstr ""
+
+#: library/country-codes.php:59
+msgid "CUBA"
+msgstr ""
+
+#: library/country-codes.php:60
+msgid "CYPRUS"
+msgstr ""
+
+#: library/country-codes.php:61
+msgid "CZECH REPUBLIC"
+msgstr ""
+
+#: library/country-codes.php:62
+msgid "DENMARK"
+msgstr ""
+
+#: library/country-codes.php:63
+msgid "DJIBOUTI"
+msgstr ""
+
+#: library/country-codes.php:64
+msgid "DOMINICA"
+msgstr ""
+
+#: library/country-codes.php:65
+msgid "DOMINICAN REPUBLIC"
+msgstr ""
+
+#: library/country-codes.php:66
+msgid "ECUADOR"
+msgstr ""
+
+#: library/country-codes.php:67
+msgid "EGYPT"
+msgstr ""
+
+#: library/country-codes.php:68
+msgid "EL SALVADOR"
+msgstr ""
+
+#: library/country-codes.php:69
+msgid "EQUATORIAL GUINEA"
+msgstr ""
+
+#: library/country-codes.php:70
+msgid "ERITREA"
+msgstr ""
+
+#: library/country-codes.php:71
+msgid "ESTONIA"
+msgstr ""
+
+#: library/country-codes.php:72
+msgid "ETHIOPIA"
+msgstr ""
+
+#: library/country-codes.php:73
+msgid "FALKLAND ISLANDS (MALVINAS)"
+msgstr ""
+
+#: library/country-codes.php:74
+msgid "FAROE ISLANDS"
+msgstr ""
+
+#: library/country-codes.php:75
+msgid "FIJI"
+msgstr ""
+
+#: library/country-codes.php:76
+msgid "FINLAND"
+msgstr ""
+
+#: library/country-codes.php:77
+msgid "FRANCE"
+msgstr ""
+
+#: library/country-codes.php:78
+msgid "FRENCH GUIANA"
+msgstr ""
+
+#: library/country-codes.php:79
+msgid "FRENCH POLYNESIA"
+msgstr ""
+
+#: library/country-codes.php:80
+msgid "FRENCH SOUTHERN TERRITORIES"
+msgstr ""
+
+#: library/country-codes.php:81
+msgid "GABON"
+msgstr ""
+
+#: library/country-codes.php:82
+msgid "GAMBIA"
+msgstr ""
+
+#: library/country-codes.php:83
+msgid "GEORGIA"
+msgstr ""
+
+#: library/country-codes.php:84
+msgid "GERMANY"
+msgstr ""
+
+#: library/country-codes.php:85
+msgid "GHANA"
+msgstr ""
+
+#: library/country-codes.php:86
+msgid "GIBRALTAR"
+msgstr ""
+
+#: library/country-codes.php:87
+msgid "GREECE"
+msgstr ""
+
+#: library/country-codes.php:88
+msgid "GREENLAND"
+msgstr ""
+
+#: library/country-codes.php:89
+msgid "GRENADA"
+msgstr ""
+
+#: library/country-codes.php:90
+msgid "GUADELOUPE"
+msgstr ""
+
+#: library/country-codes.php:91
+msgid "GUAM"
+msgstr ""
+
+#: library/country-codes.php:92
+msgid "GUATEMALA"
+msgstr ""
+
+#: library/country-codes.php:93
+msgid "GUERNSEY"
+msgstr ""
+
+#: library/country-codes.php:94
+msgid "GUINEA"
+msgstr ""
+
+#: library/country-codes.php:95
+msgid "GUINEA-BISSAU"
+msgstr ""
+
+#: library/country-codes.php:96
+msgid "GUYANA"
+msgstr ""
+
+#: library/country-codes.php:97
+msgid "HAITI"
+msgstr ""
+
+#: library/country-codes.php:98
+msgid "HEARD ISLAND AND MCDONALD ISLANDS"
+msgstr ""
+
+#: library/country-codes.php:99
+msgid "HOLY SEE (VATICAN CITY STATE)"
+msgstr ""
+
+#: library/country-codes.php:100
+msgid "HONDURAS"
+msgstr ""
+
+#: library/country-codes.php:101
+msgid "HONG KONG"
+msgstr ""
+
+#: library/country-codes.php:102
+msgid "HUNGARY"
+msgstr ""
+
+#: library/country-codes.php:103
+msgid "ICELAND"
+msgstr ""
+
+#: library/country-codes.php:104
+msgid "INDIA"
+msgstr ""
+
+#: library/country-codes.php:105
+msgid "INDONESIA"
+msgstr ""
+
+#: library/country-codes.php:106
+msgid "IRAN"
+msgstr "ایران"
+
+#: library/country-codes.php:107
+msgid "IRAQ"
+msgstr ""
+
+#: library/country-codes.php:108
+msgid "IRELAND"
+msgstr ""
+
+#: library/country-codes.php:109
+msgid "ISLE OF MAN"
+msgstr ""
+
+#: library/country-codes.php:111
+msgid "ITALY"
+msgstr ""
+
+#: library/country-codes.php:112
+msgid "JAMAICA"
+msgstr ""
+
+#: library/country-codes.php:113
+msgid "JAPAN"
+msgstr ""
+
+#: library/country-codes.php:114
+msgid "JERSEY"
+msgstr ""
+
+#: library/country-codes.php:115
+msgid "JORDAN"
+msgstr ""
+
+#: library/country-codes.php:116
+msgid "KAZAKHSTAN"
+msgstr ""
+
+#: library/country-codes.php:117
+msgid "KENYA"
+msgstr ""
+
+#: library/country-codes.php:118
+msgid "KIRIBATI"
+msgstr ""
+
+#: library/country-codes.php:119
+msgid "KOREA, DEMOCRATIC PEOPLE S REPUBLIC OF"
+msgstr ""
+
+#: library/country-codes.php:120
+msgid "KOREA, REPUBLIC OF"
+msgstr ""
+
+#: library/country-codes.php:121
+msgid "KUWAIT"
+msgstr ""
+
+#: library/country-codes.php:122
+msgid "KYRGYZSTAN"
+msgstr ""
+
+#: library/country-codes.php:123
+msgid "LAO PEOPLE S DEMOCRATIC REPUBLIC"
+msgstr ""
+
+#: library/country-codes.php:124
+msgid "LATVIA"
+msgstr ""
+
+#: library/country-codes.php:125
+msgid "LEBANON"
+msgstr ""
+
+#: library/country-codes.php:126
+msgid "LESOTHO"
+msgstr ""
+
+#: library/country-codes.php:127
+msgid "LIBERIA"
+msgstr ""
+
+#: library/country-codes.php:128
+msgid "LIBYAN ARAB JAMAHIRIYA"
+msgstr ""
+
+#: library/country-codes.php:129
+msgid "LIECHTENSTEIN"
+msgstr ""
+
+#: library/country-codes.php:130
+msgid "LITHUANIA"
+msgstr ""
+
+#: library/country-codes.php:131
+msgid "LUXEMBOURG"
+msgstr ""
+
+#: library/country-codes.php:132
+msgid "MACAO"
+msgstr ""
+
+#: library/country-codes.php:133
+msgid "MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF"
+msgstr ""
+
+#: library/country-codes.php:134
+msgid "MADAGASCAR"
+msgstr ""
+
+#: library/country-codes.php:135
+msgid "MALAWI"
+msgstr ""
+
+#: library/country-codes.php:136
+msgid "MALAYSIA"
+msgstr ""
+
+#: library/country-codes.php:137
+msgid "MALDIVES"
+msgstr ""
+
+#: library/country-codes.php:138
+msgid "MALI"
+msgstr ""
+
+#: library/country-codes.php:139
+msgid "MALTA"
+msgstr ""
+
+#: library/country-codes.php:140
+msgid "MARSHALL ISLANDS"
+msgstr ""
+
+#: library/country-codes.php:141
+msgid "MARTINIQUE"
+msgstr ""
+
+#: library/country-codes.php:142
+msgid "MAURITANIA"
+msgstr ""
+
+#: library/country-codes.php:143
+msgid "MAURITIUS"
+msgstr ""
+
+#: library/country-codes.php:144
+msgid "MAYOTTE"
+msgstr ""
+
+#: library/country-codes.php:145
+msgid "MEXICO"
+msgstr ""
+
+#: library/country-codes.php:146
+msgid "MICRONESIA, FEDERATED STATES OF"
+msgstr ""
+
+#: library/country-codes.php:147
+msgid "MOLDOVA, REPUBLIC OF"
+msgstr ""
+
+#: library/country-codes.php:148
+msgid "MONACO"
+msgstr ""
+
+#: library/country-codes.php:149
+msgid "MONGOLIA"
+msgstr ""
+
+#: library/country-codes.php:150
+msgid "MONTENEGRO"
+msgstr ""
+
+#: library/country-codes.php:151
+msgid "MONTSERRAT"
+msgstr ""
+
+#: library/country-codes.php:152
+msgid "MOROCCO"
+msgstr ""
+
+#: library/country-codes.php:153
+msgid "MOZAMBIQUE"
+msgstr ""
+
+#: library/country-codes.php:154
+msgid "MYANMAR"
+msgstr ""
+
+#: library/country-codes.php:155
+msgid "NAMIBIA"
+msgstr ""
+
+#: library/country-codes.php:156
+msgid "NAURU"
+msgstr ""
+
+#: library/country-codes.php:157
+msgid "NEPAL"
+msgstr ""
+
+#: library/country-codes.php:158
+msgid "NETHERLANDS"
+msgstr ""
+
+#: library/country-codes.php:159
+msgid "NETHERLANDS ANTILLES"
+msgstr ""
+
+#: library/country-codes.php:160
+msgid "NEW CALEDONIA"
+msgstr ""
+
+#: library/country-codes.php:161
+msgid "NEW ZEALAND"
+msgstr ""
+
+#: library/country-codes.php:162
+msgid "NICARAGUA"
+msgstr ""
+
+#: library/country-codes.php:163
+msgid "NIGER"
+msgstr ""
+
+#: library/country-codes.php:164
+msgid "NIGERIA"
+msgstr ""
+
+#: library/country-codes.php:165
+msgid "NIUE"
+msgstr ""
+
+#: library/country-codes.php:166
+msgid "NORFOLK ISLAND"
+msgstr ""
+
+#: library/country-codes.php:167
+msgid "NORTHERN MARIANA ISLANDS"
+msgstr ""
+
+#: library/country-codes.php:168
+msgid "NORWAY"
+msgstr ""
+
+#: library/country-codes.php:169
+msgid "OMAN"
+msgstr ""
+
+#: library/country-codes.php:170
+msgid "PAKISTAN"
+msgstr ""
+
+#: library/country-codes.php:171
+msgid "PALAU"
+msgstr ""
+
+#: library/country-codes.php:172
+msgid "PALESTINIAN TERRITORY, OCCUPIED"
+msgstr ""
+
+#: library/country-codes.php:173
+msgid "PANAMA"
+msgstr ""
+
+#: library/country-codes.php:174
+msgid "PAPUA NEW GUINEA"
+msgstr ""
+
+#: library/country-codes.php:175
+msgid "PARAGUAY"
+msgstr ""
+
+#: library/country-codes.php:176
+msgid "PERU"
+msgstr ""
+
+#: library/country-codes.php:177
+msgid "PHILIPPINES"
+msgstr ""
+
+#: library/country-codes.php:178
+msgid "PITCAIRN"
+msgstr ""
+
+#: library/country-codes.php:179
+msgid "POLAND"
+msgstr ""
+
+#: library/country-codes.php:180
+msgid "PORTUGAL"
+msgstr ""
+
+#: library/country-codes.php:181
+msgid "PUERTO RICO"
+msgstr ""
+
+#: library/country-codes.php:182
+msgid "QATAR"
+msgstr ""
+
+#: library/country-codes.php:183
+msgid "REUNION"
+msgstr ""
+
+#: library/country-codes.php:184
+msgid "ROMANIA"
+msgstr ""
+
+#: library/country-codes.php:185
+msgid "RUSSIAN FEDERATION"
+msgstr ""
+
+#: library/country-codes.php:186
+msgid "RWANDA"
+msgstr ""
+
+#: library/country-codes.php:187
+msgid "SAINT BARTHELEMY"
+msgstr ""
+
+#: library/country-codes.php:188
+msgid "SAINT HELENA"
+msgstr ""
+
+#: library/country-codes.php:189
+msgid "SAINT KITTS AND NEVIS"
+msgstr ""
+
+#: library/country-codes.php:190
+msgid "SAINT LUCIA"
+msgstr ""
+
+#: library/country-codes.php:191
+msgid "SAINT MARTIN"
+msgstr ""
+
+#: library/country-codes.php:192
+msgid "SAINT PIERRE AND MIQUELON"
+msgstr ""
+
+#: library/country-codes.php:193
+msgid "SAINT VINCENT AND THE GRENADINES"
+msgstr ""
+
+#: library/country-codes.php:194
+msgid "SAMOA"
+msgstr ""
+
+#: library/country-codes.php:195
+msgid "SAN MARINO"
+msgstr ""
+
+#: library/country-codes.php:196
+msgid "SAO TOME AND PRINCIPE"
+msgstr ""
+
+#: library/country-codes.php:197
+msgid "SAUDI ARABIA"
+msgstr ""
+
+#: library/country-codes.php:198
+msgid "SENEGAL"
+msgstr ""
+
+#: library/country-codes.php:199
+msgid "SERBIA"
+msgstr ""
+
+#: library/country-codes.php:200
+msgid "SEYCHELLES"
+msgstr ""
+
+#: library/country-codes.php:201
+msgid "SIERRA LEONE"
+msgstr ""
+
+#: library/country-codes.php:202
+msgid "SINGAPORE"
+msgstr ""
+
+#: library/country-codes.php:203
+msgid "SLOVAKIA"
+msgstr ""
+
+#: library/country-codes.php:204
+msgid "SLOVENIA"
+msgstr ""
+
+#: library/country-codes.php:205
+msgid "SOLOMON ISLANDS"
+msgstr ""
+
+#: library/country-codes.php:206
+msgid "SOMALIA"
+msgstr ""
+
+#: library/country-codes.php:207
+msgid "SOUTH AFRICA"
+msgstr ""
+
+#: library/country-codes.php:208
+msgid "SOUTH GEORGIA"
+msgstr ""
+
+#: library/country-codes.php:209
+msgid "SPAIN"
+msgstr ""
+
+#: library/country-codes.php:210
+msgid "SRI LANKA"
+msgstr ""
+
+#: library/country-codes.php:211
+msgid "SUDAN"
+msgstr ""
+
+#: library/country-codes.php:212
+msgid "SURINAME"
+msgstr ""
+
+#: library/country-codes.php:213
+msgid "SVALBARD AND JAN MAYEN"
+msgstr ""
+
+#: library/country-codes.php:214
+msgid "SWAZILAND"
+msgstr ""
+
+#: library/country-codes.php:215
+msgid "SWEDEN"
+msgstr ""
+
+#: library/country-codes.php:216
+msgid "SWITZERLAND"
+msgstr ""
+
+#: library/country-codes.php:217
+msgid "SYRIAN ARAB REPUBLIC"
+msgstr ""
+
+#: library/country-codes.php:218
+msgid "TAIWAN, PROVINCE OF CHINA"
+msgstr ""
+
+#: library/country-codes.php:219
+msgid "TAJIKISTAN"
+msgstr ""
+
+#: library/country-codes.php:220
+msgid "TANZANIA, UNITED REPUBLIC OF"
+msgstr ""
+
+#: library/country-codes.php:221
+msgid "THAILAND"
+msgstr ""
+
+#: library/country-codes.php:222
+msgid "TIMOR-LESTE"
+msgstr ""
+
+#: library/country-codes.php:223
+msgid "TOGO"
+msgstr ""
+
+#: library/country-codes.php:224
+msgid "TOKELAU"
+msgstr ""
+
+#: library/country-codes.php:225
+msgid "TONGA"
+msgstr ""
+
+#: library/country-codes.php:226
+msgid "TRINIDAD AND TOBAGO"
+msgstr ""
+
+#: library/country-codes.php:227
+msgid "TUNISIA"
+msgstr ""
+
+#: library/country-codes.php:228
+msgid "TURKEY"
+msgstr ""
+
+#: library/country-codes.php:229
+msgid "TURKMENISTAN"
+msgstr ""
+
+#: library/country-codes.php:230
+msgid "TURKS AND CAICOS ISLANDS"
+msgstr ""
+
+#: library/country-codes.php:231
+msgid "TUVALU"
+msgstr ""
+
+#: library/country-codes.php:232
+msgid "UGANDA"
+msgstr ""
+
+#: library/country-codes.php:233
+msgid "UKRAINE"
+msgstr ""
+
+#: library/country-codes.php:234
+msgid "UNITED ARAB EMIRATES"
+msgstr ""
+
+#: library/country-codes.php:235
+msgid "UNITED KINGDOM"
+msgstr ""
+
+#: library/country-codes.php:236
+msgid "UNITED STATES"
+msgstr ""
+
+#: library/country-codes.php:237
+msgid "UNITED STATES MINOR OUTLYING ISLANDS"
+msgstr ""
+
+#: library/country-codes.php:238
+msgid "URUGUAY"
+msgstr ""
+
+#: library/country-codes.php:239
+msgid "UZBEKISTAN"
+msgstr ""
+
+#: library/country-codes.php:240
+msgid "VANUATU"
+msgstr ""
+
+#: library/country-codes.php:241
+msgid "VENEZUELA, BOLIVARIAN REPUBLIC OF"
+msgstr ""
+
+#: library/country-codes.php:242
+msgid "VIET NAM"
+msgstr ""
+
+#: library/country-codes.php:243
+msgid "VIRGIN ISLANDS, BRITISH"
+msgstr ""
+
+#: library/country-codes.php:244
+msgid "VIRGIN ISLANDS, U.S."
+msgstr ""
+
+#: library/country-codes.php:245
+msgid "WALLIS AND FUTUNA"
+msgstr ""
+
+#: library/country-codes.php:246
+msgid "WESTERN SAHARA"
+msgstr ""
+
+#: library/country-codes.php:247
+msgid "YEMEN"
+msgstr ""
+
+#: library/country-codes.php:248
+msgid "ZAMBIA"
+msgstr ""
+
+#: library/country-codes.php:249
+msgid "ZIMBABWE"
+msgstr ""
+
+#: library/custom-post-type.php:33 library/custom-post-type.php:34
+msgid "suply"
+msgstr "مبادله"
+
+#: library/custom-post-type.php:35
+msgid "All suplies"
+msgstr "همه مبادلات"
+
+#: library/custom-post-type.php:36
+msgid "Add New"
+msgstr "افزودن جدید"
+
+#: library/custom-post-type.php:37
+msgid "Add New suply"
+msgstr "افزودن مبادله جدید"
+
+#: library/custom-post-type.php:38
+msgid "Edit"
+msgstr "ویرایش"
+
+#: library/custom-post-type.php:39
+msgid "Edit suply"
+msgstr "ویرایش مبادله"
+
+#: library/custom-post-type.php:40
+msgid "New suply"
+msgstr "مبادله جدید"
+
+#: library/custom-post-type.php:41
+msgid "View suply"
+msgstr "نمایش مبادله"
+
+#: library/custom-post-type.php:42
+msgid "Search suplies"
+msgstr "جستجوی مبادلات"
+
+#: library/custom-post-type.php:43
+msgid "Nothing found in the Database."
+msgstr "هیچ موردی در پایگاه داده وجود ندارد"
+
+#: library/custom-post-type.php:44
+msgid "Nothing found in Trash"
+msgstr "هیچ موردی در زباله دان وجود ندارد"
+
+#: library/custom-post-type.php:47
+msgid "This is a suply"
+msgstr "این یک مبادله است"
+
+#: library/custom-post-type.php:82
+msgid "suply Categories"
+msgstr "دسته بندی مبادلات"
+
+#: library/custom-post-type.php:83
+msgid "suply Category"
+msgstr "دسته بندی مبادله"
+
+#: library/custom-post-type.php:84
+msgid "Search suply Categories"
+msgstr "جستجوی دسته بندی مبادلات"
+
+#: library/custom-post-type.php:85
+msgid "All suply Categories"
+msgstr "همه دسته بندی های مبادلات"
+
+#: library/custom-post-type.php:86
+msgid "Parent suply Category"
+msgstr "دسته بندی مبادله مادر"
+
+#: library/custom-post-type.php:87
+msgid "Parent suply Category:"
+msgstr "دسته بندی مبادله مادر:"
+
+#: library/custom-post-type.php:88
+msgid "Edit suply Category"
+msgstr "ویرایش دسته بندی مبادله"
+
+#: library/custom-post-type.php:89
+msgid "Update suply Category"
+msgstr "بروز رسانی دسته بندی مبادله"
+
+#: library/custom-post-type.php:90
+msgid "Add New suply Category"
+msgstr "افزودن دسته بندی مبادله"
+
+#: library/custom-post-type.php:91
+msgid "New suply Category Name"
+msgstr "نام دسته بندی مبادله جدید"
+
+#: library/suply-meta.php:22
+msgid "Product Information"
+msgstr "اطلاعات محصول"
+
+#: library/suply-meta.php:28
+msgid "Product Quantity: "
+msgstr "میزان/مقدار محصول : "
+
+#: library/suply-meta.php:29
+msgid "Enter Amount"
+msgstr "مقدار را وارد نمایید"
+
+#: library/suply-meta.php:34
+msgid "Product Formula: "
+msgstr ""
+
+#: library/suply-meta.php:35
+msgid "Enter Formula"
+msgstr ""
+
+#: library/suply-meta.php:40
+msgid "Sell or Buy: "
+msgstr ""
+
+#: library/suply-meta.php:41
+msgid "For Sell Porduct or Buy "
+msgstr ""
+
+#: page templates/template-edit-suplys.php:84
+#: templates/template-insert-suplys.php:57
+msgid "Post's Title:"
+msgstr ""
+
+#: page templates/template-edit-suplys.php:97
+#: templates/template-insert-suplys.php:70
+msgid "Post's Content:"
+msgstr ""
+
+#: page templates/template-edit-suplys.php:105
+#: templates/template-insert-suplys.php:78
+msgid "Product Quantity:"
+msgstr ""
+
+#: page templates/template-edit-suplys.php:113
+#: templates/template-insert-suplys.php:86
+msgid "Product Formula:"
+msgstr ""
+
+#: page templates/template-edit-suplys.php:121
+#: templates/template-insert-suplys.php:94
+msgid "For Sell or Buy:"
+msgstr ""
+
+#: page templates/template-edit-suplys.php:135
+msgid "Update Post"
+msgstr ""
+
+#: page templates/template-insert-suplys.php:109
+msgid "Add Post"
+msgstr ""
+
+#: single-suply.php:41
+msgid "for : "
+msgstr "برای : "
+
+#: single-suply.php:51
+msgid "From Country : "
+msgstr "از کشور : "
+
+#: single-suply.php:55
+msgid "Alloys : "
+msgstr "آلیاژ : "
+
+#: single-suply.php:56
+msgid "Quantity : "
+msgstr "میزان / مقدار : "
+
+#: single-suply.php:57
+msgid "Submit Date : "
+msgstr "تاریخ ثبت : "
+
+#: single-suply.php:58
+msgid "Product ID : "
+msgstr "ID محصول : "
+
+#: single-suply.php:63
+msgid "Product Category : "
+msgstr "دسته بندی محصول : "
+
+#: single-suply.php:69
+msgid "Price : "
+msgstr "قیمت : "
+
+#: single-suply.php:74
+msgid "Seller Name : "
+msgstr "نام فروشنده : "
+
+#: single-suply.php:75
+msgid "Seller Phone : "
+msgstr "تلفن فروشنده : "
+
+#: single-suply.php:76
+msgid "Seller Email : "
+msgstr "ایمیل فروشنده : "
+
+#: single-suply.php:78
+msgid "Seller Catalog : "
+msgstr "کاتالوگ فروشنده : "
+
+#: single-suply.php:78 single-suply.php:86
+msgid "Download Catalog"
+msgstr "دانلود کاتالوگ"
+
+#: single-suply.php:82
+msgid "Buyer Name : "
+msgstr "نام خریدار : "
+
+#: single-suply.php:83
+msgid "Buyer Phone : "
+msgstr "تلفن خریدار : "
+
+#: single-suply.php:84
+msgid "Buyer Email : "
+msgstr "ایمیل خردیدار : "
+
+#: single-suply.php:86
+msgid "Buyer Catalog : "
+msgstr "کاتالوگ خریدار : "
+
+#: single-suply.php:104
+msgid "Buy Product From Seller"
+msgstr "خرید محصول از فروشنده : "
+
+#: single-suply.php:106
+msgid "Sell product to Buyer"
+msgstr "فروش محصول به خریدار : "
+
+#: single-suply.php:122
+msgid "Share Product"
+msgstr "اشتراک گذاری محصول "
