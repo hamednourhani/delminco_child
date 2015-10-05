@@ -23,11 +23,12 @@ header.header .menu-wrapper {
 }
 .header form.form-search{
 width : 500px;
-margin-top: 36px;
+margin-top: 22px;
 
 }
 .header form.form-search .exchange-type{
     float : left;
+    margin-left: 120px;
     padding-top : 10px;
     width: 100%;
 
@@ -286,11 +287,28 @@ table.suply-archive-table .country-flag span,table.suply-single-table .country-f
     background-color: #525252;
     color : #FFFFFF;
     border-radius : 5px;
-    padding: 10px 20px;
+    padding: 5px 15px;
 }
 /*---------------Enquery Form -------------------------*/
 .enquery-form{
     display: block;
     overflow: hidden;
+}
+/*----------------custom-taxonomies-menu----------------------------------*/
+
+.sidebar-widget.sgr-custom-taxonomies-menu{
+    border: 1px solid #ddd;
+    padding: 10px;
+
+}
+.sidebar-widget.sgr-custom-taxonomies-menu .widget-title {
+    line-height: 20px;
+    background-color: #525252;
+    padding: 16px;
+    border-top : 3px solid #00ABF0;
+}
+.sidebar-widget.sgr-custom-taxonomies-menu .widget-title span{
+   background-color : #525252;
+   color : #FFF;
 }
 

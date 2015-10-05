@@ -550,10 +550,12 @@ width : 100%;
 }
 .header form.form-search{
 width : 500px;
-margin-top: 36px;
+margin-top: 22px;
 }
 .header form.form-search .exchange-type{
     float : right;
+    margin-right : 120px;
+    margin-left: auto;
     /*padding-top : 10px;*/
 
 }
